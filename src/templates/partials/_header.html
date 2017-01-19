@@ -1,0 +1,39 @@
+{% import "data/header_slider.html" as slides %}
+<header id="header-slider" class="header">
+    <!--BEGIN - HEADER Slider-->
+    <div class="header__slider">
+            <!--BEGIN - Logo-->
+            <div class="logo"> 
+            <img src="img/logo.svg" alt="Золотая балка" class="logo__img"> 
+            </div>
+            <!--END - Logo-->
+            <div class="slider-content">
+                <!--BEGIN - Title-->
+                <div class="titles"> 
+                   {% for slide in slides.header_slider %}
+                    <h1 class="title">{{slide.title}}</h1> 
+                    {% endfor %} 
+                </div>
+                <!--END - Title-->
+                <!--BEGIN - Slider navigation-->
+                <div class="dots">
+                    {% for slide in slides.header_slider %}
+                    <div class="dot" data-img="{{slide.image}}"></div> 
+                    {% endfor %}
+                </div>
+                <!--END - Slider navigation-->
+            </div>
+            <!--BEGIN - Scroll block-->
+            <div class="scroll">
+               <div class="scroll__content">
+                    <div class="scroll__text">Прокрутите</div> 
+                    <div class="scroll__icon">
+                        <span class="icon icon-mouse"></span>
+                    </div>
+                    <div class="scroll__text">скролл вниз!</div>
+                </div> 
+            </div>
+            <!--END - Scroll block-->
+    </div>
+    <!--END - HEADER SLIDER-->
+</header>

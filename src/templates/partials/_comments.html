@@ -1,0 +1,26 @@
+
+{% import "data/comments.html" as comments %}
+   <section class="comments">
+   <div class="comments__wrapper" id="comments-slider">
+        <div class="comments__content">
+           {% for comment in comments.comments_slider %}
+          <div class="title">
+            <div class="text">{{comment.text}}</div>
+                <div class="meta">
+                    <div class="author">
+                        <div class="author__name">{{comment.name}}</div>
+                        <div class="author__position">{{comment.position}}</div>
+                    </div>
+                <div class="signature"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="dots">
+            {% for comment in comments.comments_slider %}
+            <div class="dot" data-sign="{{comment.signature}}"></div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section>

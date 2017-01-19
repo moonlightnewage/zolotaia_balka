@@ -1,0 +1,49 @@
+@function em($size, $context: 16)
+  @return ($size/$context) * 1em
+
+@function img-url($image)
+  @return url('../img/#{$image}')
+
+@function width($element, $full)
+  @return ($element*100/$full)
+
+@function get-vh($target)
+    $vh-context: ($max-height-breakpoint * .01) * 1px
+    @return ($target/$vh-context) * 1vh
+
+@function get-vw($target)
+    $vw-context: ($max-width-breakpoint * .01) * 1px
+    @return ($target/$vw-context) * 1vw
+    
+=vw($size)
+    font-size: get-vw($size)
+    @media #{$wide-screen}
+        font-size: $size
+
+=image($image)
+  background-image: img-url($image)
+
+=trans($what: all, $dur: 0.2s, $easing: ease)
+  transition: $what $dur $easing
+
+=smooth-scroll
+  -webkit-overflow-scrolling: touch
+
+=smooth-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=gpu
+  transform: translate3d(0,0,0)
+
+=md
+  +r(1023)
+    @content
+
+=sm
+  +r(767)
+    @content
+
+=xs
+  +r(599)
+    @content

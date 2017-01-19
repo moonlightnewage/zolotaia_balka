@@ -1,0 +1,91 @@
+.centuries
+    width: 100%
+    height: 444px
+    +image('centuries_bg.jpg')
+    +cover
+    +md
+        height: 350px
+    +sm
+        height: 280px
+    +xs
+        height: 230px
+    .centuries__wrapper
+        width: 100%
+        max-width: 938px
+        height: 100%
+        margin: 0 auto
+        position: relative
+        .centuries__bottle
+            width: 500px
+            height: 444px
+            +image('bottle.png')
+            +cover
+            position: absolute
+            left: -105px
+            z-index: 999
+            +md
+                width: 405px
+                height: 350px
+            +sm
+                width: 330px
+                height: 280px
+            +xs
+                width: 270px
+                height: 230px
+        .centuries__banner
+            width: 100%
+            padding: 18px 25px
+            background-color: #fff
+            +vcenter
+            +md
+                padding: 10px
+            +sm
+                padding: 7px
+            .banner
+                border-top: 3px solid $gold
+                border-bottom: 3px solid $gold
+                color: $gold
+                +clr
+                .banner__content
+                    float: right
+                    text-align: left
+                    .banner__number
+                        font-family: $charter-bold
+                        font-size: em(200)
+                        display: inline-block
+                        line-height: 1.1
+                        +md
+                            font-size: em(170)
+                        +sm
+                            font-size: em(140)
+                        +xs
+                            font-size: em(110)
+                    .banner__text
+                        max-width: 265px
+                        display: inline-block
+                        margin-left: 25px
+                        +sm
+                            max-width: 200px
+                        +xs
+                            max-width: 150px
+                        .banner__text-large
+                            font-family: $charter-bold
+                            font-size: em(51)
+                            line-height: 0.9
+                            +md
+                                font-size: em(44)
+                            +sm
+                                font-size: em(37)
+                            +xs
+                                font-size: em(30)
+                        .banner__text-small
+                            font-size: em(26)
+                            line-height: 1
+                            margin-top: 5px
+                            +md
+                                font-size: em(20)
+                            +sm
+                                font-size: em(14)
+                            +xs
+                                font-size: em(12)
+

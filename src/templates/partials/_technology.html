@@ -1,0 +1,26 @@
+{% import "data/technology_slider.html" as slides %}
+<section class="tech">
+    <!--BEGIN - WRAPPER-->
+    <div class="tech__wrapper tech__wrapper-info">
+        <!--BEGIN - Technology info-->
+        <div class="tech__info">
+            <div class="tech__info-content">
+                <div class="tech__title">
+                    <h1 class="title">Технологии производства</h1> <span class="line"></span> </div>
+                <p class="tech__text">Вина нашей базовой коллекции собрали уже немало наград на международных конкурсах. В основе их производства лежит метод Шарма-Мартинотти. Он отличается от традиционного метода тем, что вторичная ферментация происходитне в бутылке, а в герметично закрытых чанах из нержавеющей стали - акротофорах. Принцип тот же: углекислый газ, который образуется во время брожения, «расворяется» в вине. Однако в отличие от метода Шарма не приедусматривает длительную выдержку вина на дрожжевом осадке, поэтому в нем практически отсутствуют дрожжевые ароматы, а фруктовые и цветочные, напротив, сохраняются в полной ясности и чистоте. Стиль <span class="highlighted">«Золотой Балки»</span> — минеральная свежесь. фруктовая округлость и чистота.</p>
+            </div>
+        </div>
+        <!--END - Technology info-->
+    </div>
+    <!--END - WRAPPER-->
+    <!--BEGIN - WRAPPER-->
+    <div class="tech__wrapper tech__wrapper-slider" id="tech-slider">
+        <!--BEGIN - Slider navigation-->
+        <div class="tech__slider">
+            <div class="dots"> {% for slide in slides.tech_slider %}
+                <div class="dot" data-img="{{slide.image}}"></div> {% endfor %} </div>
+        </div>
+        <!--END - Slider navigation-->
+    </div>
+    <!--END - WRAPPER-->
+</section>

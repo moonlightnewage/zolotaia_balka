@@ -1,0 +1,37 @@
+{% import "data/products.html" as products %}
+<section class="products">
+    <div class="products__content">
+        <p class="products__question">Какой сорт вина вы предпочитаете?</p>
+        <div class="products__view" id="tab-menu">
+            <nav class="products__nav">
+                <ul class="menu">
+                    <li class="menu__tab">Брют</li>
+                    <li class="menu__tab">Полусухое</li>
+                    <li class="menu__tab">Полусладкое</li>
+                    <li class="menu__tab">Игристое</li>
+                </ul>
+            </nav>
+            <div class="products__block">
+               {% for product in products.vines %}
+              <div class="product">
+                    <div class="vine" data-img="{{product.image}}" data-sort="{{product.sort}}"></div>
+                    <div class="pop-up">
+                        <div class="pop-up__container">
+                            <div class="pop-up__container-inner">
+                                <p class="pop-up__brand">Золотая балка</p>
+                                <h1 class="pop-up__heading">{{product.title}}</h1>
+                                <button class="btn pop-up__btn">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+            </div>
+            <button class="btn products__show">Показать еще 8 вин</button>
+        </div>
+        <div class="products__message">
+            <p class="message">Вы можете перейти непосредственно на страницу магазина, где уже более детального ознакомиться с описанием товара, условиями приобретения и доставки.</p>
+            <button class="btn internet-shop">Перейти в интернет магазин</button>
+        </div>
+    </div>
+</section>

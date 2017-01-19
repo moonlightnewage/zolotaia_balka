@@ -1,0 +1,65 @@
+$icons: (0:0)
+$icons: map-merge($icons,('arrow_left': (X: -25px, Y:-91px, W: 14px, H: 24px, TW: 159px, TH: 119px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow_right': (X: -49px, Y:-91px, W: 14px, H: 24px, TW: 159px, TH: 119px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('leaves': (X: 0px, Y:0px, W: 159px, H: 81px, TW: 159px, TH: 119px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('mouse': (X: 0px, Y:-91px, W: 15px, H: 28px, TW: 159px, TH: 119px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-arrow_left
+//  width: 14px
+//  height: 24px
+//  background-image: url('../img/sprite.png')
+//  background-position: -25px -91px
+//
+//.icon-arrow_right
+//  width: 14px
+//  height: 24px
+//  background-image: url('../img/sprite.png')
+//  background-position: -49px -91px
+//
+//.icon-leaves
+//  width: 159px
+//  height: 81px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-mouse
+//  width: 15px
+//  height: 28px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -91px
+//
