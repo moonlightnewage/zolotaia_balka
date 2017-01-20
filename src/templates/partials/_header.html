@@ -7,22 +7,20 @@
             <img src="img/logo.svg" alt="Золотая балка" class="logo__img"> 
             </div>
             <!--END - Logo-->
-            <div class="slider-content">
-                <!--BEGIN - Title-->
-                <div class="titles"> 
-                   {% for slide in slides.header_slider %}
-                    <h1 class="title">{{slide.title}}</h1> 
-                    {% endfor %} 
-                </div>
-                <!--END - Title-->
-                <!--BEGIN - Slider navigation-->
-                <div class="dots">
-                    {% for slide in slides.header_slider %}
-                    <div class="dot" data-img="{{slide.image}}"></div> 
-                    {% endfor %}
-                </div>
-                <!--END - Slider navigation-->
+            <!--BEGIN - Title-->
+            <div class="titles"> 
+                {% for slide in slides.header_slider %}
+                <h1 class="title">{{slide.title}}</h1> 
+                {% endfor %} 
             </div>
+            <!--END - Title-->
+            <!--BEGIN - Slider navigation-->
+            <div class="dots">
+                {% for slide in slides.header_slider %}
+                <div class="dot" data-img="{{slide.image}}"></div> 
+                {% endfor %}
+            </div>
+            <!--END - Slider navigation-->
             <!--BEGIN - Scroll block-->
             <div class="scroll">
                <div class="scroll__content">

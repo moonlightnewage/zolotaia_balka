@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
 h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -72,10 +73,10 @@ html {
   box-sizing: inherit;
 }
 
-.icon-logo {
+.icon-menu {
   width: 1em;
   height: 1em;
-  fill: #fff;
+  fill: initial;
 }
 
 @font-face {
@@ -178,6 +179,7 @@ body {
 .header {
   width: 100%;
   height: 100vh;
+  min-height: 800px;
   padding: 0.875em;
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,47 +190,50 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid #c1a247;
-  padding-top: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: relative;
 }
 
 .header .header__slider .logo {
-  margin: auto;
+  position: absolute;
+  bottom: 400px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .header .header__slider .logo .logo__img {
   width: 250px;
 }
 
-.header .header__slider .slider-content {
-  height: 115px;
-  margin: auto;
+.header .header__slider .titles {
+  width: 100%;
+  position: absolute;
+  bottom: 190px;
 }
 
-.header .header__slider .slider-content .titles .title {
+.header .header__slider .titles .title {
   font-size: 3em;
   color: #fff;
   text-align: center;
 }
 
-.header .header__slider .slider-content .dots {
-  position: static;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+.header .header__slider .dots {
   text-align: center;
-  margin-top: 2.60417vw;
+  bottom: 125px;
 }
 
 .header .header__slider .scroll {
   width: 100%;
-  margin: auto;
   color: #fff;
+  position: absolute;
+  bottom: 40px;
 }
 
 .header .header__slider .scroll .scroll__content {
@@ -251,6 +256,56 @@ body {
   width: 15px;
   height: 28px;
   background-position: 0px -91px;
+}
+
+.navigation .nav {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.navigation .nav .nav__menu {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1374px;
+  margin: 0 auto;
+}
+
+.navigation .nav .nav__menu .nav__menu-item {
+  display: table-cell;
+}
+
+.navigation .nav .nav__menu .nav__menu-item:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link {
+  border-left: 1px solid #ccc;
+  font-family: "PTSansNarrowBold";
+  font-size: 1.125em;
+  color: #3d322d;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  width: auto;
+  height: 63px;
+  position: relative;
+}
+
+.navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link:hover {
+  background-color: #c1a247;
+  color: #fff;
+}
+
+.navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link .nav__menu-item__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .history {
@@ -750,210 +805,230 @@ body {
   margin: 0 auto;
 }
 
+.products .products__content .products__view .products__show:before {
+  content: "▼";
+  margin-right: 0.5em;
+}
+
 .products .products__content .products__message {
   width: 100%;
   max-width: 645px;
   margin: 0 auto;
+  margin-top: 9.72222vh;
   text-align: center;
   font-family: "CharterRegular";
 }
 
 .products .products__content .products__message .internet-shop {
-  margin: 0 auto;
+  margin: 1.85185vh auto;
 }
 
-@media only screen and (max-width: 1176px) {
+.footer {
+  width: 100%;
+}
 
-  .products .products__content .products__view .products__block .product {
+.footer .container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer .col {
+  width: calc(50% - 20px + 15px);
+}
+
+.footer .footer__row-top {
+  background-color: #3d322d;
+  padding: 50px 0;
+}
+
+.footer .footer__row-top .logo {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.footer .footer__row-top .content {
+  display: block;
+  width: 100%;
+}
+
+.footer .footer__row-btm {
+  background-color: #3b302b;
+  padding: 25px 0;
+}
+
+@media only screen and (max-width: 1176px){
+  .products .products__content .products__view .products__block .product{
     width: 33%;
   }
 }
 
-@media only screen and (max-width: 1023px) {
-
-  .header .header__slider .logo .logo__img {
+@media only screen and (max-width: 1023px){
+  .header .header__slider .logo .logo__img{
     width: 230px;
   }
-
-  .header .header__slider .slider-content .titles .title {
+  .header .header__slider .titles .title{
     font-size: 2.875em;
   }
-
-  .history .history__wrapper .history__content .banner {
+  .navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link{
+    font-size: 0.875em;
+  }
+  .history .history__wrapper .history__content .banner{
     border: none;
   }
-
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year {
+  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
     font-size: 7.875em;
   }
-
-  .tech .tech__wrapper {
+  .tech .tech__wrapper{
     width: 100%;
   }
-
-  .tech .tech__wrapper-info {
+  .tech .tech__wrapper-info{
     padding-right: 20px;
   }
-
-  .tech .tech__wrapper-info .tech__info {
+  .tech .tech__wrapper-info .tech__info{
     border-right: 1px solid #c1a247;
   }
-
-  .tech .tech__wrapper-slider {
+  .tech .tech__wrapper-slider{
     padding-left: 20px;
   }
-
-  .tech .tech__wrapper-slider .tech__slider {
+  .tech .tech__wrapper-slider .tech__slider{
     border-left: 1px solid #c1a247;
   }
-
-  .centuries {
+  .centuries{
     height: 350px;
   }
-
-  .centuries .centuries__wrapper .centuries__bottle {
+  .centuries .centuries__wrapper .centuries__bottle{
     width: 405px;
     height: 350px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner {
+  .centuries .centuries__wrapper .centuries__banner{
     padding: 10px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number{
     font-size: 10.625em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large{
     font-size: 2.75em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small{
     font-size: 1.25em;
   }
 }
 
-@media only screen and (max-width: 803px) {
-
-  .products .products__content .products__view .products__block .product {
+@media only screen and (max-width: 803px){
+  .products .products__content .products__view .products__block .product{
     width: 49.5%;
   }
 }
 
-@media only screen and (max-width: 767px) {
-
-  .header .header__slider .logo .logo__img {
+@media only screen and (max-width: 767px){
+  .header .header__slider .logo .logo__img{
     width: 210px;
   }
-
-  .header .header__slider .slider-content .titles .title {
+  .header .header__slider .titles .title{
     font-size: 2.625em;
   }
-
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year {
+  .navigation .nav{
+    border: 2px solid #c1a247;
+    margin: 0.75em auto;
+    max-width: 300px;
+  }
+  .navigation .nav .nav__menu{
+    display: block;
+  }
+  .navigation .nav .nav__menu .nav__menu-item{
+    display: block;
+  }
+  .navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link{
+    font-size: 0.875em;
+    border: none;
+  }
+  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
     font-size: 7.25em;
   }
-
-  .centuries {
+  .centuries{
     height: 280px;
   }
-
-  .centuries .centuries__wrapper .centuries__bottle {
+  .centuries .centuries__wrapper .centuries__bottle{
     width: 330px;
     height: 280px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner {
+  .centuries .centuries__wrapper .centuries__banner{
     padding: 7px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number{
     font-size: 8.75em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text{
     max-width: 200px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large{
     font-size: 2.3125em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small{
     font-size: 0.875em;
   }
-
-  .comments .comments__wrapper .comments__content .title .text {
+  .comments .comments__wrapper .comments__content .title .text{
     font-size: 0.875em;
   }
-
-  .comments .comments__wrapper .comments__content .title .meta .author .author__name {
+  .comments .comments__wrapper .comments__content .title .meta .author .author__name{
     font-size: 1em;
   }
-
-  .comments .comments__wrapper .comments__content .title .meta .author .author__position {
+  .comments .comments__wrapper .comments__content .title .meta .author .author__position{
     font-size: 0.875em;
   }
-
-  .products .products__content .products__view .products__nav .menu {
+  .products .products__content .products__view .products__nav .menu{
     display: inline-block;
   }
-
-  .products .products__content .products__view .products__nav .menu .menu__tab {
+  .products .products__content .products__view .products__nav .menu .menu__tab{
     display: block;
   }
 }
 
-@media only screen and (max-width: 599px) {
-
-  .header .header__slider .logo .logo__img {
+@media only screen and (max-width: 599px){
+  .header .header__slider .logo .logo__img{
     width: 180px;
   }
-
-  .header .header__slider .slider-content .titles .title {
+  .header .header__slider .titles .title{
     font-size: 2.375em;
   }
-
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year {
+  .navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link{
+    font-size: 0.875em;
+    border: none;
+  }
+  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
     font-size: 6.625em;
   }
-
-  .centuries {
+  .centuries{
     height: 230px;
   }
-
-  .centuries .centuries__wrapper .centuries__bottle {
+  .centuries .centuries__wrapper .centuries__bottle{
     width: 270px;
     height: 230px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__number{
     font-size: 6.875em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text{
     max-width: 150px;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-large{
     font-size: 1.875em;
   }
-
-  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small {
+  .centuries .centuries__wrapper .centuries__banner .banner .banner__content .banner__text .banner__text-small{
     font-size: 0.75em;
   }
 }
 
-@media only screen and (max-width: 489px) {
-
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year {
+@media only screen and (max-width: 489px){
+  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
     font-size: 5.375em;
   }
 }
 
-@media only screen and (max-width: 432px) {
-
-  .products .products__content .products__view .products__block .product {
+@media only screen and (max-width: 432px){
+  .products .products__content .products__view .products__block .product{
     width: 99%;
   }
 }

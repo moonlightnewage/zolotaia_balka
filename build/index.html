@@ -20,22 +20,20 @@
           <!--BEGIN - Logo-->
           <div class="logo"> <img src="img/logo.svg" alt="Золотая балка" class="logo__img"> </div>
           <!--END - Logo-->
-          <div class="slider-content">
-            <!--BEGIN - Title-->
-            <div class="titles">
-              <h1 class="title">Благородное происхождение</h1>
-              <h1 class="title">Богатые традиции</h1>
-              <h1 class="title">Изысканный букет</h1>
-            </div>
-            <!--END - Title-->
-            <!--BEGIN - Slider navigation-->
-            <div class="dots">
-              <div class="dot" data-img="slide_1.jpg"></div>
-              <div class="dot" data-img="slide_2.jpg"></div>
-              <div class="dot" data-img="slide_3.jpg"></div>
-            </div>
-            <!--END - Slider navigation-->
+          <!--BEGIN - Title-->
+          <div class="titles">
+            <h1 class="title">Благородное происхождение</h1>
+            <h1 class="title">Богатые традиции</h1>
+            <h1 class="title">Изысканный букет</h1>
           </div>
+          <!--END - Title-->
+          <!--BEGIN - Slider navigation-->
+          <div class="dots">
+            <div class="dot" data-img="slide_1.jpg"></div>
+            <div class="dot" data-img="slide_2.jpg"></div>
+            <div class="dot" data-img="slide_3.jpg"></div>
+          </div>
+          <!--END - Slider navigation-->
           <!--BEGIN - Scroll block-->
           <div class="scroll">
             <div class="scroll__content">
@@ -48,6 +46,21 @@
         </div>
         <!--END - HEADER SLIDER-->
       </header>
+      <!--END - HEADER-->
+      <!--BEGIN - HEADER-->
+      <section class="navigation">
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-item__link"> <span class="nav__menu-item__content">О компании</span> </a>
+            </li>
+            <li class="nav__menu-item"><a href="#" class="nav__menu-item__link"><span class="nav__menu-item__content">Балаклава</span></a></li>
+            <li class="nav__menu-item"><a href="#" class="nav__menu-item__link"><span class="nav__menu-item__content">Мероприятия</span></a></li>
+            <li class="nav__menu-item"><a href="#" class="nav__menu-item__link"><span class="nav__menu-item__content">Каталог вин</span></a></li>
+            <li class="nav__menu-item"><a href="#" class="nav__menu-item__link"><span class="nav__menu-item__content">Контакты</span></a></li>
+          </ul>
+        </nav>
+      </section>
       <!--END - HEADER-->
       <!--BEGIN - HISTORY SECTION-->
       <section class="history">
@@ -211,13 +224,253 @@
           <div class="products__view" id="tab-menu">
             <nav class="products__nav">
               <ul class="menu">
-                <li class="menu__tab">Брют</li>
-                <li class="menu__tab">Полусухое</li>
-                <li class="menu__tab">Полусладкое</li>
-                <li class="menu__tab">Игристое</li>
+                <li class="menu__tab" data-sort="brut">Брют</li>
+                <li class="menu__tab" data-sort="semi-brut">Полусухое</li>
+                <li class="menu__tab" data-sort="semi-sweet">Полусладкое</li>
+                <li class="menu__tab" data-sort="sparkling">Игристое</li>
               </ul>
             </nav>
             <div class="products__block">
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="secco.jpg" data-sort="brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosso.jpg" data-sort="semi-brut"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="vine" data-img="rosato.jpg" data-sort="sparkling"></div>
+                <div class="pop-up">
+                  <div class="pop-up__container">
+                    <div class="pop-up__container-inner">
+                      <p class="pop-up__brand">Золотая балка</p>
+                      <h1 class="pop-up__heading">Вино игристое жемчужное полусладкое белое</h1> <button class="btn pop-up__btn">Купить</button> </div>
+                  </div>
+                </div>
+              </div>
               <div class="product">
                 <div class="vine" data-img="bianco.jpg" data-sort="semi-sweet"></div>
                 <div class="pop-up">
@@ -344,7 +597,112 @@
         </div>
       </section>
       <!--END - PRODUCTS SECTION-->
+      <!--BEGIN - PRODUCTS SECTION-->
+      <!--<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4492.732558625681!2d37.63652805612792!3d55.73476462853038!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1484906272141" width="100%" height="590" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+      <!--END - PRODUCTS SECTION-->
       <!--BEGIN - FOOTER-->
+      <footer class="footer">
+        <!--BEGIN Footer ROW-->
+        <div class="footer__row-top">
+          <!--BEGIN Container-->
+          <div class="container">
+            <!--BEGIN ROW-->
+            <div class="row">
+              <!--BEGIN Logo-->
+              <a href="#" class="logo"> <img src="img/footer-logo.png" alt="Золотая балка" class="logo__img"> </a>
+              <!--END Logo-->
+            </div>
+            <!--END ROW-->
+            <!--BEGIN ROW-->
+            <div class="row">
+              <div class="content">
+                <div class="col">
+                  <div class="col__container">
+                    <div class="col-inner">
+                      <!-- BEGIN  Address-->
+                      <div class="address">299043, г. Севастополь,<br />ул. Новикова, 56</div>
+                      <!-- END  Address-->
+                    </div>
+                    <div class="col-inner">
+                      <!-- BEGIN  Menu-->
+                      <ul class="footer__menu">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-item__link">О компании</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-item__link">Мероприятия</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-item__link">Каталог вин</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-item__link">Контакты</a></li>
+                      </ul>
+                      <!-- END  Menu-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="col__container">
+                    <div class="col-inner">
+                      <!-- BEGIN  Contact-->
+                      <div class="contact">
+                        <div class="contact__department">Коммерческий отдел:</div>
+                        <div class="contact__info">
+                          <p class="contact__info-phone">тел.: +8 (8692) 63-50-81</p>
+                          <p class="contact__info-phone">тел.: +8 (495) 255-44-70</p>
+                        </div>
+                      </div>
+                      <!-- END  Contact-->
+                      <!-- BEGIN  Social-->
+                      <div class="social">
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                      </div>
+                      <!-- END  Social-->
+                    </div>
+                    <div class="col-inner">
+                      <!-- BEGIN  Contact-->
+                      <div class="contact">
+                        <div class="contact__department">Приемная:</div>
+                        <div class="contact-info">
+                          <p class="contact__info-phone">тел.: +8 (8692) 63-51-19</p>
+                          <p class="contact__info-phone">факс: +8 (8692) 45-52-72</p>
+                        </div>
+                      </div>
+                      <!-- END  Contact-->
+                      <!-- BEGIN  Contact-->
+                      <div class="contact">
+                        <div class="contact__department">Отдел маркетинга:</div>
+                        <div class="contact-info">
+                          <p class="contact__info-mail">marketing@zbkrim.ru</p>
+                        </div>
+                      </div>
+                      <!-- END  Contact-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--END ROW-->
+          </div>
+          <!--END Container-->
+        </div>
+        <!--END Footer ROW-->
+        <!--BEGIN Footer ROW-->
+        <div class="footer__row-btm">
+          <!--BEGIN Container-->
+          <div class="container">
+            <!--BEGIN ROW-->
+            <div class="row">
+              <div class="col">
+                <p>Все права защищены ©2016 Золотая Балка</p>
+                <p>Условия использования и политика конфиденциальности</p>
+              </div>
+              <div class="col">
+                <p>Разработанно в <span class="underlined">tomatdesign</span> </p>
+              </div>
+            </div>
+          </div>
+          <!--END Container-->
+        </div>
+        <!--END Footer ROW-->
+      </footer>
       <!--END - FOOTER-->
     </div>
     <!-- END content -->

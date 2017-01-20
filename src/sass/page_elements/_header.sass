@@ -1,17 +1,21 @@
 .header
     width: 100%
-    height: 100vh 
+    height: 100vh
+    min-height: 800px
     padding: em(14)
-    +cover
+    +cover 
     .header__slider
         width: 100%
         height: 100%
         border: 1px solid $gold
-        padding-top: 10%
         display: flex
         flex-direction: column
+        position: relative
         .logo
-            margin: auto
+            position: absolute
+            bottom: 400px
+            left: 50%
+            transform: translate(-50%)
             .logo__img
                 width: 250px
                 +md
@@ -20,29 +24,28 @@
                     width: 210px
                 +xs
                     width: 180px
-        .slider-content
-            height: 115px
-            margin: auto
-            .titles
-                .title
-                    font-size: em(48)
-                    color: #fff
-                    text-align: center
-                    +md
-                        font-size: em(46)
-                    +sm
-                        font-size: em(42)
-                    +xs
-                        font-size: em(38)
-            .dots
-                position: static
-                transform: none
+        .titles
+            width: 100%
+            position: absolute
+            bottom: 190px
+            .title
+                font-size: em(48)
+                color: #fff
                 text-align: center
-                margin-top: get-vw(50px)
+                +md
+                    font-size: em(46)
+                +sm
+                    font-size: em(42)
+                +xs
+                    font-size: em(38)
+        .dots
+            text-align: center
+            bottom: 125px
         .scroll
             width: 100%
-            margin: auto
             color: #fff
+            position: absolute
+            bottom: 40px
             .scroll__content
                 text-align: center
                 .scroll__text

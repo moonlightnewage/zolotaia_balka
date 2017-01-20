@@ -1,0 +1,48 @@
+.navigation
+    .nav
+        width: 100%
+        margin: 0 auto
+        border-bottom: 1px solid #ccc
+        +sm
+            border: 2px solid $gold
+            margin: em(12) auto
+            max-width: 300px
+        .nav__menu
+            display: table
+            table-layout: fixed
+            border-collapse: collapse
+            width: 100%
+            max-width: 1374px
+            margin: 0 auto
+            +sm
+                display: block
+            .nav__menu-item
+                display: table-cell
+                +sm
+                    display: block
+                &:last-child
+                    border-right: 1px solid #ccc
+                .nav__menu-item__link
+                    border-left: 1px solid #ccc
+                    font-family: $ptsans-narrow-bold
+                    font-size: em(18)
+                    color: $brown
+                    text-decoration: none
+                    text-transform: uppercase
+                    display: block
+                    width: auto
+                    height: 63px
+                    position: relative
+                    +md
+                        font-size: em(14)
+                    +sm
+                        font-size: em(14)
+                        border: none
+                    +xs
+                        font-size: em(14)
+                        border: none
+                    &:hover
+                        background-color: $gold
+                        color: #fff
+                    .nav__menu-item__content
+                        +vcenter

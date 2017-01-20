@@ -83,12 +83,16 @@
                                     
             .products__show
                 margin: 0 auto
+                &:before
+                    content: "▼"
+                    margin-right: em(8)
         .products__message
             width: 100%
             max-width: 645px
             margin: 0 auto
+            margin-top: get-vh(105px)
             text-align: center
             font-family: $charter-regular
             .internet-shop
-                margin: 0 auto
+                margin: get-vh(20px) auto
         
