@@ -5,9 +5,25 @@
         max-width: 1130px
         margin: 0 auto
         padding: 0 20px
+        font-family: $charter-regular
+        color: #fff
     .col
         width: calc(50% - 20px + 15px)
-        
+        display: inline-block
+        +md
+            width: calc(100% - 20px + 15px)
+            display: block
+        .underlined
+            color: $gray
+            text-decoration: none
+            display: inline-block
+            padding-bottom: 1px
+            border-bottom: 1px solid $gray
+            &:hover
+                transition: 0.4s
+                border-bottom-color: rgba(225,225,0,0)
+            +r(400)
+                border: none
     .footer__row-top
         background-color: $brown
         padding: 50px 0
@@ -17,69 +33,73 @@
         .content
             display: block
             width: 100%
+            +xs
+                font-size: em(14)
+            .address
+                color: $gray
+            .footer__menu
+                .footer__menu-item
+                    padding-bottom: 20px
+                    .footer__menu-item__link
+                        font-family: $charter-bold
+                        color: #fff
+                        text-decoration: none
+                        &:hover
+                            transition: 0.4s
+                            color: $gray
+            .contact
+                .contact__department
+                    color: $gray
+                .contact__info
+                    .underlined
+                        color: #fff
+            .social
+                .icon-svg
+                    display: inline-block
+                .icon-svg > *
+                    width: 44px
+                    height: 44px
+                    fill: $gray
+                    +xs
+                        width: 35px
+                        height: 35px
+                    &:hover
+                        transition: 0.4s
+                        fill: #fff
+            .col__container
+                .col-inner
+                    width: calc(50% - 20px + 15px)
+                    display: inline-block
+                    vertical-align: top
+                    +r(400)
+                        width: 100%
+                        display: block
+                    & > *
+                        margin-bottom: 27px
+                
             
     .footer__row-btm
         background-color: $dark-brown
         padding: 25px 0
-
-
-//.footer
-//    width: 100%
-//    background-color: $brown
-//    font-family: $charter-regular
-//    font-size: em(18)
-//    color: #fff
-//    .footer__container
-//        width: 100%
-//        max-width: 1366px
-//        margin: 0 auto
-//        padding: 0 25px
-//        .logo
-//            padding-top: 55px
-//            .logo__img
-//                margin-left: -10px
-//        .columns
-//            display: flex
-//            flex-wrap: wrap
-//            .column
-//                width: 50%
-//                display: flex
-//                justify-content: space-around
-//                +md
-//                    width: 100%
-//                .address
-//                    color: $gray
-//                    +md
-//                        width: 50%
-//                .footer__nav
-//                    .footer__menu
-//                        .footer__menu-item
-//                            padding-bottom: 15px
-//                            .footer__menu-item__link
-//                                font-family: $charter-bold
-//                                color: #fff
-//                                text-decoration: none
-//                                &:hover
-//                                    color: $gray
-//                .contacts
-//                    .contact
-//                        margin-bottom: 25px
-//                        .contact__department
-//                            @extend .address
-//                        .contact__info-mail
-//                            display: inline-block
-//                            padding-bottom: 1px
-//                            border-bottom: 1px solid #fff
-//    .footer__copyright
-//        background-color: $dark-brown
-//        font-size: em(12)
-//        color: $gray
-//        height: 60px
-//        .footer__container
-//            +clr
-//            +vcenter
-//            .column
-//                .underlined
-//                    padding-bottom: 1px
-//                    border-bottom: 1px solid $gray
-//                    
+        .col__text
+            font-size: em(12)
+            color: $gray
+            +sm
+                width: 100%
+                margin-bottom: 15px
+        .row
+            +clr
+            .col
+                +sm
+                    width: 100%
+            .col-left
+                width: calc(75% - 20px + 15px)
+                float: left
+                .col-left__text
+                    display: inline-block
+                    vertical-align: top
+                    &:first-of-type
+                        width: calc(75%/2.3 - 20px + 15px)
+            .col-right
+                width: calc(25% - 20px + 15px)
+                float: right

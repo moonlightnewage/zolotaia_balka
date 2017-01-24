@@ -22,6 +22,7 @@ body
         border-radius: 50%
         cursor: pointer
         &:hover
+            transition: 0.4s
             border-color: $gold
         &.active
             border-color: $gold
@@ -32,6 +33,15 @@ body
             border: none
             border-radius: 50%
             background-color: $gold
+            +md
+                width: 13px
+                height: 13px
+            +sm
+                width: 11px
+                height: 11px
+            +xs
+                width: 9px
+                height: 9px
         
 .btn
     display: block
@@ -42,6 +52,7 @@ body
     color: $gold
     text-transform: uppercase
     &:hover
+        transition: 0.4s
         background-color: $gold
         color: #fff
 

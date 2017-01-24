@@ -89,27 +89,40 @@
       </section>
       <!--END - HISTORY SECTION-->
       <!--BEGIN - AWARDS SECTION-->
-      <!--
-
-<section class="awards container">
-    <div class="row">
-        <div class="cols col-4 col-4-center">
-            <div class="icon icon-arrow_left"></div>
-            <div class="icon icon-arrow_right"></div>
-            <div class="awards__slider">
-                <ul class="awards__items"> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2013 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2013 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2014 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучший винодел 2013 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2013 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2013 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучшее игристое 2014 года</a></li> 
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">Лучший винодел 2013 года</a></li>  </ul>
-            </div>
+      <section class="awards">
+        <!--BEGIN - Awards carousel-->
+        <div class="awards__carousel" id="awards-carousel">
+          <!--BEGIN - Arrow left-->
+          <div class="icon icon-arrow-left"></div>
+          <!--END - Arrow left-->
+          <!--BEGIN - Awards carousel box-->
+          <div class="awards__carousel-box">
+            <ul class="awards__items">
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2013 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2013 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2014 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучший винодел 2013 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2013 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2013 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучшее игристое 2014 года</a> </li>
+              <li class="awards__item">
+                <div class="icon-leaves"></div><a href="#" class="awards__item-link">Лучший винодел 2013 года</a> </li>
+            </ul>
+          </div>
+          <!--END - Awards carousel box-->
+          <!--BEGIN - Arrow right-->
+          <div class="icon icon-arrow-right"></div>
+          <!--END - Arrow right-->
         </div>
-    </div>
-</section>-->
+        <!--END - Awards carousel-->
+      </section>
       <!--END - AWARDS SECTION-->
       <!--BEGIN - TECHNOLOGY SECTION-->
       <section class="tech">
@@ -597,9 +610,24 @@
         </div>
       </section>
       <!--END - PRODUCTS SECTION-->
-      <!--BEGIN - PRODUCTS SECTION-->
-      <!--<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4492.732558625681!2d37.63652805612792!3d55.73476462853038!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1484906272141" width="100%" height="590" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-      <!--END - PRODUCTS SECTION-->
+      <!--BEGIN - MAP SECTION-->
+      <section class="map">
+        <div class="controls">
+          <div class="controls__scale">
+            <div class="controls__scale-plus">+</div>
+            <div class="controls__scale-minus">-</div>
+          </div>
+          <div class="controls__on-map"><span class="controls__icon-svg">
+<svg class="icon-marker"><use xlink:href="img/sprite.svg#icon-marker"></use></svg>
+</span><span class="controls__text">На карте</span></div>
+          <div class="controls__list"><span class="controls__icon-svg">
+<svg class="icon-list"><use xlink:href="img/sprite.svg#icon-list"></use></svg>
+</span><span class="controls__text">Списком</span></div>
+          <div class="controls__region"><span class="controls__text">Москва и Московская область</span></div>
+        </div>
+        <div id="map" class="map-canvas"> </div>
+      </section>
+      <!--END - MAP SECTION-->
       <!--BEGIN - FOOTER-->
       <footer class="footer">
         <!--BEGIN Footer ROW-->
@@ -649,10 +677,10 @@
                       <!-- END  Contact-->
                       <!-- BEGIN  Social-->
                       <div class="social">
-                        <div class="icon"></div>
-                        <div class="icon"></div>
-                        <div class="icon"></div>
-                        <div class="icon"></div>
+                        <a href="!#" class="icon-svg"> <svg class="icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg> </a>
+                        <a href="!#" class="icon-svg"> <svg class="icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg> </a>
+                        <a href="!#" class="icon-svg"> <svg class="icon-instagram"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg> </a>
+                        <a href="!#" class="icon-svg"> <svg class="icon-pinterest"><use xlink:href="img/sprite.svg#icon-pinterest"></use></svg> </a>
                       </div>
                       <!-- END  Social-->
                     </div>
@@ -660,7 +688,7 @@
                       <!-- BEGIN  Contact-->
                       <div class="contact">
                         <div class="contact__department">Приемная:</div>
-                        <div class="contact-info">
+                        <div class="contact__info">
                           <p class="contact__info-phone">тел.: +8 (8692) 63-51-19</p>
                           <p class="contact__info-phone">факс: +8 (8692) 45-52-72</p>
                         </div>
@@ -669,9 +697,7 @@
                       <!-- BEGIN  Contact-->
                       <div class="contact">
                         <div class="contact__department">Отдел маркетинга:</div>
-                        <div class="contact-info">
-                          <p class="contact__info-mail">marketing@zbkrim.ru</p>
-                        </div>
+                        <div class="contact__info"> <a href="#" class="contact__info-mail underlined">marketing@zbkrim.ru</a> </div>
                       </div>
                       <!-- END  Contact-->
                     </div>
@@ -690,12 +716,12 @@
           <div class="container">
             <!--BEGIN ROW-->
             <div class="row">
-              <div class="col">
-                <p>Все права защищены ©2016 Золотая Балка</p>
-                <p>Условия использования и политика конфиденциальности</p>
+              <div class="col col-left">
+                <p class="col__text col-left__text">Все права защищены ©2016 Золотая Балка</p>
+                <p class="col__text col-left__text"><a href="#" class="underlined">Условия использования и политика конфиденциальности</a></p>
               </div>
-              <div class="col">
-                <p>Разработанно в <span class="underlined">tomatdesign</span> </p>
+              <div class="col col-right">
+                <p class="col__text col-right__text">Разработанно в <a href="#" class="underlined">tomatdesign</a> </p>
               </div>
             </div>
           </div>
@@ -708,6 +734,7 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>

@@ -1,131 +1,89 @@
-export default function tabMenu() {
+export default function tabMenu(initialView, futherView) {
     var tabMenu = $('#tab-menu'),
         menuItems = $(tabMenu).find('.menu__tab'),
         vines = $(tabMenu).find('.vine'),
         images = [],
         sorts = [],
-        firstStep = 4,
-        secondStep = 8;
+        firstStep = initialView,
+        secondStep = futherView;
     
-//    making first item active
+//    BEGIN - making first items active by default
     $(menuItems[0]).addClass('active');
-    showBrut();
+    //showBrut();
+    showSort('brut');
+//    END - making first items active by default
     
-//    functions for showing sort
-    
-    function showBrut() {
+//    BEGIN - showing sort function
+    function showSort(sort) {
         $(vines).parent().hide();
-        var brut = $('.vine').filter($('[data-sort = "brut"]'));
+        var sort = $('.vine').filter($('[data-sort = "'+ sort +'"]'));
         
         for (var i = 0; i < firstStep; i++) {
-            $(brut[i]).parent().show();
+            $(sort[i]).parent().fadeIn(600);
         }
         
         $('.products__show').click(function() {
             $(vines).parent().hide();
         for (var i = 0; i < firstStep + secondStep; i++) {
-            $(brut[i]).parent().show();
+            $(sort[i]).parent().show();
         }
     });
-        
     }
-    function showSemiBrut() {
-        $(vines).parent().hide();
-        var semiBrut = $('.vine').filter($('[data-sort = "semi-brut"]'));
-        
-        for (var i = 0; i < firstStep; i++) {
-            $(semiBrut[i]).parent().show();
-        }
-        
-        $('.products__show').click(function() {
-            $(vines).parent().hide();
-        for (var i = 0; i < firstStep + secondStep; i++) {
-            $(semiBrut[i]).parent().show();
-        }
-    });
-        
-    }
-    function showSemiSweet() {
-        $(vines).parent().hide();
-        var semiSweet = $('.vine').filter($('[data-sort = "semi-sweet"]'));
-        
-        for (var i = 0; i < firstStep; i++) {
-            $(semiSweet[i]).parent().show();
-        }
-        
-        $('.products__show').click(function() {
-            $(vines).parent().hide();
-        for (var i = 0; i < firstStep + secondStep; i++) {
-            $(semiSweet[i]).parent().show();
-        }
-    });
+//    END - showing sort function
 
-    }
-    function showSparkling() {
-        $(vines).parent().hide();
-        var sparkling = $('.vine').filter($('[data-sort = "sparkling"]'));
-        
-        for (var i = 0; i < firstStep; i++) {
-            $(sparkling[i]).parent().show();
-        }
-        
-        $('.products__show').click(function() {
-            $(vines).parent().hide();
-        for (var i = 0; i < firstStep + secondStep; i++) {
-            $(sparkling[i]).parent().show();
-        }
-    });
-        
-    }
-    
-
-//    clicker for selecting sort
-    
+//    BEGIN - clicker for selecting sort
     $(menuItems).parent().on('click', function(e) {
         var target = $(e.target);
         
-//    active tabs
+        //    BEGIN - making tab active
+        $(target).addClass('active').siblings().removeClass('active');
+        //    END - making tab active
         
-$(target).addClass('active').siblings().removeClass('active');
-        
-//    selecting sort
-        
+        //    BEGIN - selecting sort
         switch($(target).attr('data-sort')) {
             case 'brut':
-                showBrut();
+                //showBrut();
+                showSort('brut');
                 break;
             case 'semi-brut':
-                showSemiBrut();
+                //showSemiBrut();
+                showSort('semi-brut');
                 break;
             case 'semi-sweet':
-                showSemiSweet();
+                //showSemiSweet();
+                showSort('semi-sweet');
                 break;
             case 'sparkling':
-                showSparkling();
+                //showSparkling();
+                showSort('sparkling');
                 break;
             default:
                 $(vines).hide();
         }
+        //    END - selecting sort
     });
+//    END - clicker for selecting sort
     
     
-//    adding bg-images
-    
+//    BEGIN - adding bg-images
     $(vines).each(function() {
         var self = $(this);
         var image = $(self).attr('data-img');
         $(self).css('background-image', 'url(img/' + image + ')');
+//    END - adding bg-images
         
-//    hiding pop-up
+//    BEGIN - hiding pop-ups by default
         var popUp = $(self).next();
         $(popUp).hide();
+//    END - hiding pop-ups by default
         
+        
+//    BEGIN - events for showing pop-ups
         var product = $(self).parent();
         
-//    event for showing pop-up
         $(product).on('mouseenter', function(e) {
             e.stopPropagation();
-            $(this).find('.pop-up').fadeIn(200);
+            $(this).find('.pop-up').fadeIn(400);
             $(this).find('.vine').animate({
                 opacity: '0.5',
                 zoom: '0.98'
@@ -139,6 +97,7 @@ $(target).addClass('active').siblings().removeClass('active');
                 zoom: '1'
             }, 0);
         });
+//    END - events for showing pop-ups
     });
 }
 

@@ -1,41 +1,44 @@
 .awards
     width: 100%
-    padding: 40px 0
     background-color: $gold
-    .awards__slider
+    .awards__carousel
         width: 100%
-        margin: 10px 30px
-        //display: inline-block
+        max-width: 915px
+        margin: 0 auto
+        padding: 35px 0
         overflow: hidden
-        .awards__items
-            width: 10000px
-            .awards__item
-                width: 159px
-                height: 81px
-                float: left
-                padding: 10px
-                .awards__link
-                    font-family: $charter-bold
-                    font-size: 14px
-                    color: #fff
-                    text-transform: uppercase
-                    text-decoration: none
-                    width: 90px
-                    height: 80px
-                    padding: 10px 0
-                    display: inline-block
-    .icon
-        width: 14px
-        height: 24px
         position: relative
-        cursor: pointer
-    .icon-arrow_left
-        background-position: -25px -91px
-        float: left
-    .icon-arrow_right
-        background-position: -49px -91px
-        float: right
-                    
-        
-        
-        
+        display: flex
+        justify-content: space-between
+        .awards__carousel-box
+            margin: auto
+            max-width: 800px
+            overflow: hidden
+            .awards__items
+                width: 1000%
+                margin: 0 auto
+                overflow: hidden
+                +clr
+                .awards__item
+                    float: left
+                    display: block
+                    height: 70px
+                    text-align: center
+                    position: relative
+                    .icon-leaves
+                        +s(leaves)
+                        +vcenter
+                    .awards__item-link
+                        font-family: $charter-bold
+                        font-size: em(12)
+                        color: #fff
+                        text-transform: uppercase
+                        text-decoration: none
+                        +vcenter
+        .icon
+            cursor: pointer
+            margin: auto
+        .icon-arrow-left
+            +s(arrow_left)
+        .icon-arrow-right
+            +s(arrow_right)

@@ -1,39 +1,37 @@
-export default function carousel() {
+export default function carousel(itemWidth, itemMargin, itemView) {
+    var carousel = $('#awards-carousel .awards__carousel-box'),
+        step = itemWidth + itemMargin,
+        carouselBox = itemView * step - itemMargin,
+        itemNumb = $('#awards-carousel .awards__item').length,
+        marginLeft = 0,
+        maxMarginLeft = itemNumb * step;
+    console.log(maxMarginLeft);
     
-    $('.awards .icon-arrow_left').on('click', function() {
-        var carousel = $(this).parent('.awards');
-        slideLeft(carousel);
-        return false;
+    $(carousel).width(carouselBox);
+    $('#awards-carousel .awards__item').width(itemWidth).css("margin-right", itemMargin);
+    
+    $('#awards-carousel .icon-arrow-left').click(function(){
+       if(-marginLeft == maxMarginLeft - itemView * step) {
+           return false;
+       }
+        else {
+            marginLeft = marginLeft - step;
+        }
+        $('#awards-carousel .awards__items').animate({
+            marginLeft: marginLeft
+        }, 600);
+        
     });
     
-        $('.awards .icon-arrow_right').on('click', function() {
-        var carousel = $(this).parent('.awards');
-        slideRight(carousel);
-        return false;
+        $('#awards-carousel .icon-arrow-right').click(function(){
+       if(marginLeft == 0) {
+           return false;
+       }
+        else {
+            marginLeft = marginLeft + step;
+        }
+        $('#awards-carousel .awards__items').animate({
+            marginLeft: marginLeft
+        }, 600);
     });
-
-    function slideLeft(carousel) {
-        var blockWidth = $(carousel).find('.awards__item').outerWidth();
-        $(carousel).find('.awards__items .awards__item').eq(-1).clone().prependTo($(carousel).find('.awards__items'));
-        $(carousel).find('.awards__items').css({
-            'left': '-' + blockWidth + 'px'
-        });
-        $(carousel).find('.awards__items .awards__item').eq(-1).remove();
-        $(carousel).find('.awards__items').animate({
-            left: '0px'
-        }, 200);
-    }
-
-    function slideRight(carousel) {
-        var blockWidth = $(carousel).find('.awards__item').outerWidth();
-        $(carousel).find('.awards__items').animate({
-            'left': '-' + blockWidth + 'px'
-        }, 200, function () {
-            $(carousel).find('.awards__items .awards__item').eq(0).clone().appendTo($(carousel).find('.awards__items'));
-            $(carousel).find('.awards__items .awards__item').eq(0).remove();
-            $(carousel).find('.awards__items').css({
-                left: '0px'
-            });
-        });
-    }
 }

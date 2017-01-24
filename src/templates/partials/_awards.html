@@ -1,14 +1,24 @@
-<!--
 {% import "data/awards_slider.html" as slides %}
-<section class="awards container">
-    <div class="row">
-        <div class="cols col-4 col-4-center">
-            <div class="icon icon-arrow_left"></div>
-            <div class="icon icon-arrow_right"></div>
-            <div class="awards__slider">
-                <ul class="awards__items"> {% for slide in slides.awards_slider %}
-                    <li class="awards__item icon icon-leaves"><a href="#" class="link awards__link">{{slide.text}}</a></li> {% endfor %} </ul>
+<section class="awards">
+        <!--BEGIN - Awards carousel-->
+        <div class="awards__carousel" id="awards-carousel">
+         <!--BEGIN - Arrow left-->
+          <div class="icon icon-arrow-left"></div>
+          <!--END - Arrow left-->
+           <!--BEGIN - Awards carousel box-->
+            <div class="awards__carousel-box">
+                <ul class="awards__items"> 
+                   {% for slide in slides.awards_slider %}
+                    <li class="awards__item">
+                        <div class="icon-leaves"></div><a href="#" class="awards__item-link">{{slide.text}}</a>
+                    </li> 
+                    {% endfor %} 
+                </ul>
             </div>
+            <!--END - Awards carousel box-->
+        <!--BEGIN - Arrow right-->
+        <div class="icon icon-arrow-right"></div>
+        <!--END - Arrow right-->
         </div>
-    </div>
-</section>-->
+        <!--END - Awards carousel-->
+</section>
