@@ -5,7 +5,6 @@ export default function carousel(itemWidth, itemMargin, itemView) {
         itemNumb = $('#awards-carousel .awards__item').length,
         marginLeft = 0,
         maxMarginLeft = itemNumb * step;
-    console.log(maxMarginLeft);
     
     $(carousel).width(carouselBox);
     $('#awards-carousel .awards__item').width(itemWidth).css("margin-right", itemMargin);
