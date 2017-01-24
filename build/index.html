@@ -18,7 +18,7 @@
         <!--BEGIN - HEADER Slider-->
         <div class="header__slider">
           <!--BEGIN - Logo-->
-          <div class="logo"> <img src="img/logo.svg" alt="Золотая балка" class="logo__img"> </div>
+          <div class="header__logo"> <img src="img/logo.svg" alt="Золотая балка" class="logo"> </div>
           <!--END - Logo-->
           <!--BEGIN - Title-->
           <div class="titles">
@@ -35,11 +35,11 @@
           </div>
           <!--END - Slider navigation-->
           <!--BEGIN - Scroll block-->
-          <div class="scroll">
-            <div class="scroll__content">
-              <div class="scroll__text">Прокрутите</div>
-              <div class="scroll__icon"> <span class="icon icon-mouse"></span> </div>
-              <div class="scroll__text">скролл вниз!</div>
+          <div class="header__scroll">
+            <div class="header__scroll-content">
+              <div class="header__scroll-text">Прокрутите</div>
+              <div class="icon header__scroll-icon"> <span class="icon__mouse"></span> </div>
+              <div class="header__scroll-text">скролл вниз!</div>
             </div>
           </div>
           <!--END - Scroll block-->
@@ -68,17 +68,21 @@
           <!--BEGIN - Section content-->
           <div class="history__content">
             <!--BEGIN - Banner-->
-            <div class="banner">
+            <div class="history__banner">
               <!--BEGIN - Banner text-->
-              <div class="banner__text">
-                <div class="banner__year">
-                  <div class="banner__text-small banner__text-small-top"><span>Наша история
+              <div class="history__text">
+                <!--BEGIN - Year block -->
+                <div class="history__year">
+                  <div class="history__year-text history__year-text-top"><span>Наша история
                                 <br />берет свое начало</span></div>
-                  <div class="year">1889</div>
-                  <div class="banner__text-small banner__text-small-bottom"><span>года</span></div>
+                  <div class="history__year-figure">1889</div>
+                  <div class="history__year-text history__year-text-bottom"><span>года</span></div>
                 </div>
-                <div class="banner__text-small">когда был заложен первый винный подвал.</div>
-                <p class="banner__info">X-VII век до нашей эры - Тавры - первый исторический народ Крыма, начали заниматься на территории Балаклавы виноградарством.</p>
+                <!--END - Year block -->
+                <!--BEGIN - Text block -->
+                <div class="history__text-small">когда был заложен первый винный подвал.</div>
+                <p class="history__text-large">X-VII век до нашей эры - Тавры - первый исторический народ Крыма, начали заниматься на территории Балаклавы виноградарством.</p>
+                <!--END - Text block -->
               </div>
               <!--END - Banner text-->
             </div>

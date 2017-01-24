@@ -145,12 +145,6 @@ body {
   line-height: 1.4;
 }
 
-.icon {
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
 .dots {
   display: block;
   position: absolute;
@@ -202,6 +196,38 @@ body {
   color: #fff;
 }
 
+.icon__mouse {
+  display: inline-block;
+  background-image: url("../img/sprite.png");
+  width: 15px;
+  height: 28px;
+  background-position: 0px -91px;
+}
+
+.icon__arrow_left {
+  display: inline-block;
+  background-image: url("../img/sprite.png");
+  width: 14px;
+  height: 24px;
+  background-position: -25px -91px;
+}
+
+.icon__arrow_right {
+  display: inline-block;
+  background-image: url("../img/sprite.png");
+  width: 14px;
+  height: 24px;
+  background-position: -49px -91px;
+}
+
+.icon__leaves {
+  display: inline-block;
+  background-image: url("../img/sprite.png");
+  width: 159px;
+  height: 81px;
+  background-position: 0px 0px;
+}
+
 .block {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -222,16 +248,10 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid #c1a247;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   position: relative;
 }
 
-.header .header__slider .logo {
+.header .header__slider .header__logo {
   position: absolute;
   bottom: 37.03704vh;
   left: 50%;
@@ -240,7 +260,7 @@ body {
   transform: translate(-50%);
 }
 
-.header .header__slider .logo .logo__img {
+.header .header__slider .header__logo .logo {
   width: 250px;
 }
 
@@ -257,37 +277,29 @@ body {
 }
 
 .header .header__slider .dots {
-  text-align: center;
   bottom: 11.57407vh;
 }
 
-.header .header__slider .scroll {
+.header .header__slider .header__scroll {
   width: 100%;
   color: #fff;
   position: absolute;
   bottom: 3.7037vh;
 }
 
-.header .header__slider .scroll .scroll__content {
+.header .header__slider .header__scroll .header__scroll-content {
   text-align: center;
 }
 
-.header .header__slider .scroll .scroll__content .scroll__text {
+.header .header__slider .header__scroll .header__scroll-content .header__scroll-text {
+  font-size: 0.875em;
   display: inline-block;
   overflow: hidden;
-  font-size: 0.875em;
 }
 
-.header .header__slider .scroll .scroll__content .scroll__icon {
-  display: inline-block;
+.header .header__slider .header__scroll .header__scroll-content .header__scroll-icon {
   padding: 0 10px;
-}
-
-.header .header__slider .scroll .scroll__content .scroll__icon .icon-mouse {
-  background-image: url("../img/sprite.png");
-  width: 15px;
-  height: 28px;
-  background-position: 0px -91px;
+  display: inline-block;
 }
 
 .navigation .nav {
@@ -377,21 +389,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.history .history__wrapper .history__content .banner {
-  width: 100%;
-  height: 100%;
+.history .history__wrapper .history__content .history__banner {
   border: 1px solid #c1a247;
 }
 
-.history .history__wrapper .history__content .banner .banner__text {
+.history .history__wrapper .history__content .history__banner .history__text {
   max-width: 517px;
-  height: 100%;
   margin: 0 auto;
   padding: 90px 0;
-  position: relative;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year {
+.history .history__wrapper .history__content .history__banner .history__text .history__year {
   width: 100%;
   border-top: 2px solid #c1a247;
   border-bottom: 2px solid #c1a247;
@@ -399,41 +407,41 @@ body {
   position: relative;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year .banner__text-small {
+.history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-text {
   width: 100%;
   font-size: 1.25em;
   line-height: 20px;
   position: absolute;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year .banner__text-small span {
+.history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-text span {
   background-color: #fff;
   padding: 0 10px;
   display: inline-block;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year .banner__text-small-top {
+.history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-text-top {
   top: -20px;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year .banner__text-small-bottom {
+.history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-text-bottom {
   bottom: -10px;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__year .year {
+.history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-figure {
   font-family: "CharterBold";
   font-size: 8.5em;
   font-weight: 600;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__text-small {
+.history .history__wrapper .history__content .history__banner .history__text .history__text-small {
   font-size: 1.25em;
   color: #c1a247;
   position: relative;
   bottom: -15px;
 }
 
-.history .history__wrapper .history__content .banner .banner__text .banner__info {
+.history .history__wrapper .history__content .history__banner .history__text .history__text-large {
   font-family: "CharterRegular";
   position: relative;
   bottom: -40px;
@@ -1242,7 +1250,7 @@ body {
     width: 13px;
     height: 13px;
   }
-  .header .header__slider .logo .logo__img{
+  .header .header__slider .header__logo .logo{
     width: 200px;
   }
   .header .header__slider .titles .title{
@@ -1251,10 +1259,10 @@ body {
   .navigation .nav .nav__menu .nav__menu-item .nav__menu-item__link{
     font-size: 0.875em;
   }
-  .history .history__wrapper .history__content .banner{
+  .history .history__wrapper .history__content .history__banner{
     border: none;
   }
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
+  .history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-figure{
     font-size: 7.875em;
   }
   .tech .tech__wrapper{
@@ -1329,7 +1337,7 @@ body {
     width: 11px;
     height: 11px;
   }
-  .header .header__slider .logo .logo__img{
+  .header .header__slider .header__logo .logo{
     width: 150px;
   }
   .header .header__slider .titles .title{
@@ -1350,7 +1358,7 @@ body {
     font-size: 0.875em;
     border: none;
   }
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
+  .history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-figure{
     font-size: 7.25em;
   }
   .centuries{
@@ -1404,7 +1412,7 @@ body {
     width: 9px;
     height: 9px;
   }
-  .header .header__slider .logo .logo__img{
+  .header .header__slider .header__logo .logo{
     width: 100px;
   }
   .header .header__slider .titles .title{
@@ -1414,7 +1422,7 @@ body {
     font-size: 0.875em;
     border: none;
   }
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
+  .history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-figure{
     font-size: 6.625em;
   }
   .tech .tech__wrapper-info .tech__info .tech__info-content .tech__title .title{
@@ -1455,7 +1463,7 @@ body {
 }
 
 @media only screen and (max-width: 489px){
-  .history .history__wrapper .history__content .banner .banner__text .banner__year .year{
+  .history .history__wrapper .history__content .history__banner .history__text .history__year .history__year-figure{
     font-size: 5.375em;
   }
 }

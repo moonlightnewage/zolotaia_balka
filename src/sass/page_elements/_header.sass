@@ -8,15 +8,13 @@
         width: 100%
         height: 100%
         border: 1px solid $gold
-        display: flex
-        flex-direction: column
         position: relative
-        .logo
+        .header__logo
             position: absolute
             bottom: get-vh(400px)
             left: 50%
             transform: translate(-50%)
-            .logo__img
+            .logo
                 width: 250px
                 +md
                     width: 200px
@@ -39,23 +37,20 @@
                 +xs
                     font-size: em(24)
         .dots
-            text-align: center
             bottom: get-vh(125px)
-        .scroll
+        .header__scroll
             width: 100%
             color: #fff
             position: absolute
             bottom: get-vh(40px)
-            .scroll__content
+            .header__scroll-content
                 text-align: center
-                .scroll__text
+                .header__scroll-text
+                    font-size: em(14)
                     display: inline-block
                     overflow: hidden
-                    font-size: em(14)
-                .scroll__icon
-                    display: inline-block
+                .header__scroll-icon
                     padding: 0 10px
-                    .icon-mouse
-                        +s(mouse)
+                    display: inline-block
                     
             

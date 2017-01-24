@@ -4,11 +4,6 @@ body
   font-size: 16px
   color: $brown
   line-height: 1.4
-
-.icon
-    background-image: url('../img/sprite.png')
-    background-repeat: no-repeat
-    display: inline-block
     
 .dots
     display: block
@@ -56,3 +51,7 @@ body
         background-color: $gold
         color: #fff
 
+@each $png-icon in $png-icons
+    .icon__#{$png-icon}
+        display: inline-block
+        +s($png-icon)
