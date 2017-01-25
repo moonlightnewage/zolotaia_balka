@@ -9,7 +9,7 @@ export default function carousel(itemWidth, itemMargin, itemView) {
     $(carousel).width(carouselBox);
     $('#awards-carousel .awards__item').width(itemWidth).css("margin-right", itemMargin);
     
-    $('#awards-carousel .icon-arrow-left').click(function(){
+    $('#awards-carousel .awards__trigger-left').click(function(){
        if(-marginLeft == maxMarginLeft - itemView * step) {
            return false;
        }
@@ -22,7 +22,7 @@ export default function carousel(itemWidth, itemMargin, itemView) {
         
     });
     
-        $('#awards-carousel .icon-arrow-right').click(function(){
+        $('#awards-carousel .awards__trigger-right').click(function(){
        if(marginLeft == 0) {
            return false;
        }

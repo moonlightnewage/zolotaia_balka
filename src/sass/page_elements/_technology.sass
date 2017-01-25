@@ -3,61 +3,60 @@
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    .tech__wrapper
+    .tech__container
         width: 50%
         padding: 20px
         +md
             width: 100%
-    .tech__wrapper-info
+    .tech__info
         padding-right: 0
         +md
             padding-right: 20px
-        .tech__info
+        .tech__info-inner
             height: 100%
             border: 1px solid $gold
             border-right: none
             display: flex
             +md
                 border-right: 1px solid $gold
-            .tech__info-content
+            .tech__content
                 width: 100%
                 max-width: 517px
                 margin: auto
                 .tech__title
                     position: relative
-                    .title
+                    .tech__title-heading
+                        border-bottom: 2px solid $gold
                         padding: 20px 35px
                         margin-left: 5px
-                        border-bottom: 2px solid $gold
                         font-family: $ptsans-narrow-bold
                         font-size: em(30)
                         text-transform: uppercase
                         +xs
                             font-size: em(25)
-                    .line
+                    .tech__title-line
+                        width: percentage(380/517)
+                        height: 4px
+                        background-color: #fff
                         position: absolute
                         bottom: 0
                         right: 0
                         display: block
-                        width: percentage(380/517)
-                        height: 4px
-                        background-color: #fff
-                        
                 .tech__text
                     padding: 20px 35px
                     font-family: $charter-regular
                     text-align: left
-                    .highlighted
+                    .gold
                         font-family: $charter-bold
                         color: $gold
 
-    .tech__wrapper-slider
+    .tech__slider
         height: 665px
-        padding-left: 0
         +cover
+        padding-left: 0
         +md
             padding-left: 20px
-        .tech__slider
+        .tech__slider-inner
             height: 100%
             border: 1px solid $gold
             border-left: none

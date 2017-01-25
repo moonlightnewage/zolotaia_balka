@@ -13,10 +13,10 @@
         height: 180px
     +r(325)
         height: 130px
-    .centuries__wrapper
+    .centuries__container
         width: 100%
-        max-width: 938px
         height: 100%
+        max-width: 938px
         margin: 0 auto
         position: relative
         .centuries__bottle
@@ -51,19 +51,19 @@
                 padding: 10px
             +sm
                 padding: 7px
-            .banner
+            .centuries__banner-inner
                 border-top: 3px solid $gold
                 border-bottom: 3px solid $gold
                 color: $gold
                 +clr
-                .banner__content
+                .centuries__content
                     float: right
                     text-align: left
-                    .banner__number
+                    .centuries__figure
                         font-family: $charter-bold
                         font-size: em(200)
-                        display: inline-block
                         line-height: 1.1
+                        display: inline-block
                         +md
                             font-size: em(170)
                         +sm
@@ -74,10 +74,10 @@
                             font-size: em(80)
                         +r(325)
                             font-size: em(70)
-                    .banner__text
+                    .centuries__text
                         max-width: 265px
-                        display: inline-block
                         margin-left: 25px
+                        display: inline-block
                         +sm
                             max-width: 200px
                         +xs
@@ -86,7 +86,7 @@
                             max-width: 100px
                         +r(325)
                             max-width: 70px
-                        .banner__text-large
+                        .centuries__text-large
                             font-family: $charter-bold
                             font-size: em(51)
                             line-height: 0.9
@@ -100,10 +100,10 @@
                                 font-size: em(23)
                             +r(325)
                                 font-size: em(18)
-                        .banner__text-small
+                        .centuries__text-small
+                            margin-top: 5px
                             font-size: em(26)
                             line-height: 1
-                            margin-top: 5px
                             +md
                                 font-size: em(20)
                             +sm

@@ -98,8 +98,8 @@ export default function createMap() {
     initMap();
 
 //    BEGIN - custom zoom
-    var zoomIn = $('.map .controls__scale-plus');
-    var zoomOut = $('.map .controls__scale-minus');
+    var zoomIn = $('.map .map__zoom-in');
+    var zoomOut = $('.map .map__zoom-out');
 
     $(zoomIn).click(function() {
         map.setZoom(map.getZoom()+1);
@@ -112,22 +112,22 @@ export default function createMap() {
 //    END - custom zoom
         
 //    BEGIN - custom list
-    var list = $('.map .controls__list').append('<ul class="list"></ul>').children().last();
+    var list = $('.map .map__list').append('<ul class="dropdown-list"></ul>').children().last();
     
     $(list).hide();
     
-    $(list).append('<li class="list__item">'+ firstMarker.title +'</li>');
-    $(list).append('<li class="list__item">'+ secondMarker.title +'</li>');
-    $(list).append('<li class="list__item">'+ thirdMarker.title +'</li>');
-    $(list).append('<li class="list__item">'+ fourthMarker.title +'</li>');
+    $(list).append('<li class="dropdown-list__item">'+ firstMarker.title +'</li>');
+    $(list).append('<li class="dropdown-list__item">'+ secondMarker.title +'</li>');
+    $(list).append('<li class="dropdown-list__item">'+ thirdMarker.title +'</li>');
+    $(list).append('<li class="dropdown-list__item">'+ fourthMarker.title +'</li>');
     
         var i = 0;
-    $('.map .list__item').each(function() {
+    $('.map .dropdown-list__item').each(function() {
        $(this).attr('data-number', i);
         i++;
     });
     
-    $('.map .controls__list').click(function() {
+    $('.map .map__list').click(function() {
        $(list).slideToggle(); 
     });
 //    END - custom list

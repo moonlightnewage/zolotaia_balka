@@ -51,6 +51,17 @@ body
         background-color: $gold
         color: #fff
 
+.dropdown-list
+    width: 100%
+    background-color: #fff
+    color: $gold
+    padding-left: 42px
+    .dropdown-list__item
+        +vertical
+        text-align: left
+        font-size: 1em
+        height: 45px
+
 @each $png-icon in $png-icons
     .icon__#{$png-icon}
         display: inline-block

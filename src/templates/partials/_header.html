@@ -4,13 +4,13 @@
     <div class="header__slider">
             <!--BEGIN - Logo-->
             <div class="header__logo"> 
-            <img src="img/logo.svg" alt="Золотая балка" class="logo"> 
+            <img src="img/logo.svg" alt="Золотая балка" class="header__logo-img"> 
             </div>
             <!--END - Logo-->
             <!--BEGIN - Title-->
-            <div class="titles"> 
+            <div class="header__titles"> 
                 {% for slide in slides.header_slider %}
-                <h1 class="title">{{slide.title}}</h1> 
+                <h1 class="header__title flick">{{slide.title}}</h1> 
                 {% endfor %} 
             </div>
             <!--END - Title-->
@@ -25,7 +25,7 @@
             <div class="header__scroll">
                <div class="header__scroll-content">
                     <div class="header__scroll-text">Прокрутите</div> 
-                    <div class="icon header__scroll-icon">
+                    <div class="header__scroll-icon">
                         <span class="icon__mouse"></span>
                     </div>
                     <div class="header__scroll-text">скролл вниз!</div>

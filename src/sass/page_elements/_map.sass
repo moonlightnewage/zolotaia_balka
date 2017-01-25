@@ -1,11 +1,11 @@
 .map
     position: relative
-    .map-canvas
+    .map__canvas
         width: 100%
         height: 590px
         position: relative
         z-index: 1
-    .controls
+    .map__controls
         width: 100%
         max-width: 1074px
         height: 45px
@@ -17,37 +17,36 @@
         z-index: 999
         background-color: transparent
         +clr
-        .controls__scale
-            background-color: transparent
+        .map__scale
             max-width: 20px
             margin-right: 8px
-            .controls__scale-plus
+            background-color: transparent
+            .map__zoom-in
                 margin-bottom: 5px
-        .controls__scale > *
-            background-color: $gold
+        .map__scale > *
             width: 20px
             height: 20px
+            background-color: $gold
             cursor: pointer
-        .controls__on-map
+        .map__on-map
             max-width: 175px
-            position: relative
             +r(1075)
                 max-width: 125px
             +r(930)
                 max-width: 100px
             +r(777)
                 display: none
-            .controls__text
+            .map__on-map-text
                 +vertical
                 font-size: 1em
                 overflow: hidden
-            .controls__icon-svg
+            .map__on-map-icon
                 +vertical
                 font-size: 1.3em
                 .icon-marker
                     vertical-align: middle
                     fill: #fff
-        .controls__list
+        .map__list
             max-width: 530px
             background-color: #fff
             text-align: left
@@ -58,28 +57,18 @@
                 max-width: 380px
             +r(777)
                 display: none
-            .controls__text
+            .map__list-text
                 +vertical
                 font-size: 1em
                 color: $gold
-            .controls__icon-svg
+            .map__list-icon
                 +vertical
                 font-size: 1.3em
                 padding-left: 42px
                 .icon-list
                     vertical-align: middle
                     fill: $gold
-            .list
-                width: 100%
-                background-color: #fff
-                color: $gold
-                padding-left: 42px
-                .list__item
-                    +vertical
-                    text-align: left
-                    font-size: 1em
-                    height: 45px
-        .controls__region
+        .map__region
             max-width: 330px
             +r(1075)
                 max-width: 280px
@@ -87,11 +76,10 @@
                 max-width: 250px
             +r(301)
                 max-width: 220px
-            .controls__text
+            .map__region-text
                 +vertical
                 font-size: 1em
-    .controls > * 
-        float: left
+    .map__controls > * 
         width: 100%
         height: 100%
         background-color: $gold
@@ -99,6 +87,7 @@
         color: #fff
         text-align: center
         text-transform: uppercase
+        float: left
             
             
         

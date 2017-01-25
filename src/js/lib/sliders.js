@@ -3,7 +3,7 @@ export function slider(slider) {
     var slider = $(slider)
         , images = []
         , signatures = []
-        , titles = $(slider).find('.title')
+        , flicks = $(slider).find('.flick')
         , dots = $(slider).find('.dots').children()
         , currentImg = 0
         , currentTitle = 0
@@ -19,7 +19,7 @@ export function slider(slider) {
         signatures.push(signature);
         $(this).attr('data-number', currentSign++);
     });
-    $(titles).each(function () {
+    $(flicks).each(function () {
         $(this).attr('data-number', currentTitle++);
         $(this).hide();
     });
@@ -35,7 +35,7 @@ export function slider(slider) {
             'opacity': '0.5'
         }, 600, function () {
             $(slider).css('background-image', 'url(img/' + images[n] + ')');
-            $(titles[n]).show().siblings().hide();
+            $(flicks[n]).show().siblings().hide();
             $(dots[n]).parent().addClass('active').siblings().removeClass('active');
             $(slider).find('.signature').css('background-image', 'url(img/' + signatures[n] + ')');
             n++;

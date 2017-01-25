@@ -1,14 +1,35 @@
 <section class="map">
-   <div class="controls">
-        <div class="controls__scale">
-            <div class="controls__scale-plus">+</div>
-            <div class="controls__scale-minus">-</div>
+   <!--BEGIN - Map controls-->
+   <div class="map__controls">
+       <!--BEGIN - Map scale-->
+        <div class="map__scale">
+            <div class="map__zoom-in">+</div>
+            <div class="map__zoom-out">-</div>
         </div>
-        <div class="controls__on-map"><span class="controls__icon-svg">{{mixins.icon('marker')}}</span><span class="controls__text">На карте</span></div>
-        <div class="controls__list"><span class="controls__icon-svg">{{mixins.icon('list')}}</span><span class="controls__text">Списком</span></div>
-        <div class="controls__region"><span class="controls__text">Москва и Московская область</span></div>
+        <!--END - Map scale-->
+        <!--BEGIN - On map-->
+        <div class="map__on-map">
+            <span class="map__on-map-icon">{{mixins.icon('marker')}}</span>
+            <span class="map__on-map-text">На карте</span>
+        </div>
+        <!--END - On map-->
+        <!--BEGIN - Map list-->
+        <div class="map__list">
+            <span class="map__list-icon">{{mixins.icon('list')}}</span>
+            <span class="map__list-text">Списком</span>
+        </div>
+        <!--END - Map list-->
+        <!--BEGIN - Map region-->
+        <div class="map__region">
+            <span class="map__region-text">Москва и Московская область</span>
+        </div>
+        <!--END - Map region-->
     </div>
-    <div id="map" class="map-canvas">
+    <!--END - Map controls-->
+    
+    <!--BEGIN - Map canvas-->
+    <div id="map" class="map__canvas">
         
     </div>
+    <!--END - Map canvas-->
 </section>

@@ -6,13 +6,11 @@
         max-width: 915px
         margin: 0 auto
         padding: 35px 0
-        overflow: hidden
-        position: relative
         display: flex
         justify-content: space-between
         .awards__carousel-box
-            margin: auto
             max-width: 800px
+            margin: auto
             overflow: hidden
             .awards__items
                 width: 1000%
@@ -20,13 +18,12 @@
                 overflow: hidden
                 +clr
                 .awards__item
-                    float: left
-                    display: block
                     height: 70px
                     text-align: center
+                    float: left
+                    display: block
                     position: relative
-                    .icon-leaves
-                        +s(leaves)
+                    .awards__item-icon
                         +vcenter
                     .awards__item-link
                         font-family: $charter-bold
@@ -35,10 +32,6 @@
                         text-transform: uppercase
                         text-decoration: none
                         +vcenter
-        .icon
+        .awards__trigger
             cursor: pointer
             margin: auto
-        .icon-arrow-left
-            +s(arrow_left)
-        .icon-arrow-right
-            +s(arrow_right)

@@ -1,8 +1,7 @@
 .products
     width: 100%
     padding: em(22)
-    .products__content
-        width: 100%
+    .products__container
         border: 1px solid $gold
         padding-top: get-vh(70px)
         padding-bottom: get-vh(100px)
@@ -26,9 +25,9 @@
                         text-transform: uppercase
                         padding: 10px 40px
                         display: inline-block
+                        cursor: pointer
                         +sm
                             display: block
-                        cursor: pointer
                         &:hover
                             transition: 0.4s
                             background-color: $gold
@@ -40,8 +39,8 @@
                 margin: get-vh(80px) 0
                 .product
                     width: 99/4 + %
-                    display: inline-block
                     position: relative
+                    display: inline-block
                     +r(1176)
                         width: 99/3 + %
                     +r(803)
@@ -93,8 +92,8 @@
             max-width: 645px
             margin: 0 auto
             margin-top: get-vh(105px)
-            text-align: center
             font-family: $charter-regular
-            .internet-shop
+            text-align: center
+            .i-shop
                 margin: get-vh(20px) auto
         

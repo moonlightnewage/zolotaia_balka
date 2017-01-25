@@ -1,49 +1,48 @@
 .navigation
-    .nav
+    .navigation__nav-top
         width: 100%
         margin: 0 auto
-        border-bottom: 1px solid #ccc
+        border-bottom: 1px solid $gray-border
         +sm
-            border: 2px solid $gold
-            margin: em(12) auto
             max-width: 300px
-        .nav__menu
-            display: table
-            table-layout: fixed
-            border-collapse: collapse
+            border: 2px solid $gold
+            margin: 12px auto
+        .navigation__menu
             width: 100%
             max-width: 1374px
             margin: 0 auto
+            display: table
+            table-layout: fixed
             +sm
                 display: block
-            .nav__menu-item
+            .navigation__menu-item
                 display: table-cell
                 +sm
                     display: block
                 &:last-child
-                    border-right: 1px solid #ccc
-                .nav__menu-item__link
-                    border-left: 1px solid #ccc
+                    border-right: 1px solid $gray-border
+                .navigation__menu-item__link
+                    width: auto
+                    height: 63px
+                    border-left: 1px solid $gray-border
                     font-family: $ptsans-narrow-bold
                     font-size: em(18)
                     color: $brown
-                    text-decoration: none
                     text-transform: uppercase
+                    text-decoration: none
                     display: block
-                    width: auto
-                    height: 63px
                     position: relative
                     +md
                         font-size: em(14)
                     +sm
-                        font-size: em(14)
                         border: none
+                        font-size: em(14)
                     +xs
-                        font-size: em(14)
                         border: none
+                        font-size: em(14)
                     &:hover
                         transition: 0.4s
                         background-color: $gold
                         color: #fff
-                    .nav__menu-item__content
+                    .navigation__menu-item__text
                         +vcenter

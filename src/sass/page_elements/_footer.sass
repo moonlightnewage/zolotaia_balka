@@ -1,41 +1,41 @@
 .footer
     width: 100%
-    .container
+    .underlined
+            border-bottom: 1px solid $gray
+            padding-bottom: 1px
+            color: $gray
+            text-decoration: none
+            display: inline-block
+            &:hover
+                transition: 0.4s
+                border-bottom-color: rgba(225,225,0,0)
+            +r(400)
+                border: none
+    .footer__container
         width: 100%
         max-width: 1130px
         margin: 0 auto
         padding: 0 20px
         font-family: $charter-regular
         color: #fff
-    .col
+    .footer__col
         width: calc(50% - 20px + 15px)
         display: inline-block
         +md
             width: calc(100% - 20px + 15px)
             display: block
-        .underlined
-            color: $gray
-            text-decoration: none
-            display: inline-block
-            padding-bottom: 1px
-            border-bottom: 1px solid $gray
-            &:hover
-                transition: 0.4s
-                border-bottom-color: rgba(225,225,0,0)
-            +r(400)
-                border: none
     .footer__row-top
         background-color: $brown
         padding: 50px 0
-        .logo
-            display: block
+        .footer__logo
             margin-bottom: 40px
-        .content
             display: block
+        .footer__content
             width: 100%
+            display: block
             +xs
                 font-size: em(14)
-            .address
+            .footer__address
                 color: $gray
             .footer__menu
                 .footer__menu-item
@@ -47,16 +47,16 @@
                         &:hover
                             transition: 0.4s
                             color: $gray
-            .contact
-                .contact__department
+            .footer__contact
+                .footer__contact-department
                     color: $gray
-                .contact__info
+                .footer__contact-info
                     .underlined
                         color: #fff
-            .social
-                .icon-svg
+            .footer__social
+                .footer__social-icon
                     display: inline-block
-                .icon-svg > *
+                .footer__social-icon > *
                     width: 44px
                     height: 44px
                     fill: $gray
@@ -66,40 +66,40 @@
                     &:hover
                         transition: 0.4s
                         fill: #fff
-            .col__container
-                .col-inner
-                    width: calc(50% - 20px + 15px)
-                    display: inline-block
-                    vertical-align: top
-                    +r(400)
-                        width: 100%
-                        display: block
-                    & > *
-                        margin-bottom: 27px
+            .footer__col-inner
+                width: calc(50% - 20px + 15px)
+                vertical-align: top
+                display: inline-block
+                +r(400)
+                    width: 100%
+                    display: block
+                & > *
+                    margin-bottom: 27px
                 
             
     .footer__row-btm
         background-color: $dark-brown
         padding: 25px 0
-        .col__text
+        .footer__row-btm__text
             font-size: em(12)
             color: $gray
             +sm
                 width: 100%
                 margin-bottom: 15px
-        .row
+        .footer__row-inner
             +clr
-            .col
-                +sm
-                    width: 100%
-            .col-left
+            .footer__col-left
                 width: calc(75% - 20px + 15px)
                 float: left
-                .col-left__text
-                    display: inline-block
+                +sm
+                    width: 100%
+                .footer__col-left__text
                     vertical-align: top
+                    display: inline-block
                     &:first-of-type
                         width: calc(75%/2.3 - 20px + 15px)
-            .col-right
+            .footer__col-right
                 width: calc(25% - 20px + 15px)
                 float: right
+                +sm
+                    width: 100%

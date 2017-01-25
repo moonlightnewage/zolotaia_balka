@@ -4,9 +4,6 @@
 @function img-url($image)
   @return url('../img/#{$image}')
 
-@function width($element, $full)
-  @return ($element*100/$full)
-
 @function get-vh($target)
     $vh-context: ($max-height-breakpoint * .01) * 1px
     @return ($target/$vh-context) * 1vh
