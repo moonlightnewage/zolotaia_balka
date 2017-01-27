@@ -1608,7 +1608,10 @@ body {
     font-size: 0.875em;
   }
   .products__menu{
-    display: inline-block;
+    border: 1px solid #c1a247;
+    width: 100%;
+    max-width: 165px;
+    margin: 0 auto;
   }
   .products__tab{
     display: block;
