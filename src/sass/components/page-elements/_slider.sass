@@ -1,0 +1,44 @@
+/* Custom slick elements */
+
+.slick-dots
+    bottom: 0
+    z-index: 1
+    li
+        button
+            border: 1px solid transparent
+            padding: 4px
+            &:before
+                width: 15px
+                height: 15px
+                background: $gold
+                +md
+                    width: 13px
+                    height: 13px
+                +sm
+                    width: 11px
+                    height: 11px
+                +xs
+                    width: 9px
+                    height: 9px
+            &:hover
+                border: 1px solid $gold
+                border-radius: 50%
+                &:before
+                    background: $gold
+        &.slick-active
+            button
+                border: 1px solid $gold
+                border-radius: 50%
+                &:before
+                    background: $gold
+
+.custom-slick-dots_header
+    bottom: get-vh(145px)
+.custom-slick-dots_tech
+    bottom: get-vh(45px)
+.custom-slick-dots_comments
+    bottom: get-vh(35px)
+.custom-slick-slide
+    margin-right: 50px
+        
+        

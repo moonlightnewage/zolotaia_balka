@@ -1,37 +1,61 @@
 {% import "data/products.html" as products %}
 <section class="products">
-    <div class="products__container">
-        <p class="products__question">Какой сорт вина вы предпочитаете?</p>
-        <div class="products__view" id="tab-menu">
-            <nav class="products__nav">
-                <ul class="menu">
-                    <li class="menu__tab" data-sort="brut">Брют</li>
-                    <li class="menu__tab" data-sort="semi-brut">Полусухое</li>
-                    <li class="menu__tab" data-sort="semi-sweet">Полусладкое</li>
-                    <li class="menu__tab" data-sort="sparkling">Игристое</li>
-                </ul>
-            </nav>
+    <!--BEGIN - Frame block-->
+    <div class="frame-block products__frame-block">
+      <!--BEGIN - Products container-->
+       <div class="products__container">
+         <!--BEGIN - Products question-->
+          <p class="products__question">Какой сорт вина вы предпочитаете?</p>
+          <!--END - Products question-->
+          <!--BEGIN - Products view-->
+          <div class="products__view">
+            <!--BEGIN - Products menu-->
+            <ul class="products__menu">
+                    <li class="products__tab" data-sort="brut">Брют</li>
+                    <li class="products__tab" data-sort="semi-brut">Полусухое</li>
+                    <li class="products__tab" data-sort="semi-sweet">Полусладкое</li>
+                    <li class="products__tab" data-sort="sparkling">Игристое</li>
+            </ul>
+            <!--END - Products menu-->
+            <!--BEGIN - Products block-->
             <div class="products__block">
-               {% for product in products.vines %}
-              <div class="product">
-                    <div class="vine" data-img="{{product.image}}" data-sort="{{product.sort}}"></div>
-                    <div class="pop-up">
-                        <div class="pop-up__container">
-                            <div class="pop-up__container-inner">
-                                <p class="pop-up__brand">Золотая балка</p>
-                                <h1 class="pop-up__heading">{{product.title}}</h1>
-                                <button class="btn pop-up__btn">Купить</button>
+            {% for product in products.wines %}
+             <!--BEGIN - Products item-->
+              <div class="products__item">
+                   <!--BEGIN - Products image-->
+                    <div class="products__img" data-img="{{product.image}}" data-sort="{{product.sort}}"></div>
+                    <!--END - Products image-->
+                    <!--BEGIN - Products pop-up-->
+                    <div class="products__pop-up">
+                        <div class="products__pop-up_inner">
+                            <div class="products__info_pop-up">
+                                <p class="products__brand_pop-up">Золотая балка</p>
+                                <h1 class="products__heading_pop-up">{{product.title}}</h1>
+                                <button class="btn products__btn_pop-up">Купить</button>
                             </div>
                         </div>
                     </div>
+                    <!--END - Products pop-up-->
                 </div>
-                    {% endfor %}
+                <!--END - Products item-->
+                {% endfor %}
             </div>
-            <button class="btn products__show">Показать еще 8 вин</button>
+            <!--END - Products block-->
+            <!--BEGIN - Products button show-->
+            <button class="btn products__btn_show">Показать еще 8 вин</button>
+            <!--END - Products button show-->
+            </div>
+            <!--END - Products view-->
+            <!--BEGIN - Products message-->
+            <div class="products__message">
+                <p class="products__text">Вы можете перейти непосредственно на страницу магазина, где уже более детального ознакомиться с описанием товара, условиями приобретения и доставки.</p>
+                <!--BEGIN - Products button shop-->
+                <button class="btn products__btn_shop">Перейти в интернет магазин</button>
+                <!--BEGIN - Products button shop-->
+            </div>
+            <!--END - Products message-->
         </div>
-        <div class="products__message">
-            <p class="products__message-text">Вы можете перейти непосредственно на страницу магазина, где уже более детального ознакомиться с описанием товара, условиями приобретения и доставки.</p>
-            <button class="btn i-shop">Перейти в интернет магазин</button>
-        </div>
+        <!--END - Products container-->
     </div>
+    <!--BEGIN - Frame block-->
 </section>

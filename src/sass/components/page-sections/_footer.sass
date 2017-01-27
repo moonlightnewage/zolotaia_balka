@@ -1,0 +1,93 @@
+/* FOOTER SECTION */
+
+.footer
+    width: 100%
+.footer__row_top
+    background-color: $brown
+    padding: 50px 0
+.footer__row_btm
+    background-color: $dark-brown
+    padding: 25px 0
+.footer__container
+    width: 100%
+    max-width: 1130px
+    margin: 0 auto
+    padding: 0 20px
+    font-family: $charter-regular, sans-serif
+    color: #fff
+.footer__col
+    width: calc(50% - 20px + 15px)
+    display: inline-block
+    +md
+        width: calc(100% - 20px + 15px)
+        display: block
+.footer__col_inner
+    width: calc(50% - 20px + 15px)
+    vertical-align: top
+    display: inline-block
+    +r(400)
+        width: 100%
+        display: block
+    & > *
+        margin-bottom: 27px
+
+.footer__logo
+    margin-bottom: 40px
+    display: block
+.footer__content
+    width: 100%
+    display: block
+    +xs
+        font-size: em(14)
+.footer__address
+    color: $gray
+.footer__menu-item
+    padding-bottom: 20px
+.footer__menu-link
+    font-family: $charter-bold, sans-serif
+    color: #fff
+    text-decoration: none
+    &:hover
+        transition: 0.4s
+        color: $gray
+.footer__department
+    color: $gray
+.footer__icon
+    display: inline-block
+    svg
+        width: 44px
+        height: 44px
+        fill: $gray
+        +xs
+            width: 35px
+            height: 35px
+        &:hover
+            transition: 0.4s
+            fill: #fff
+.footer__mail.underlined
+    color: #fff
+.footer__row
+    +clr
+.footer__col-left
+    width: calc(75% - 20px + 15px)
+    float: left
+    +sm
+        width: 100%
+.footer__col-right
+    width: calc(25% - 20px + 15px)
+    float: right
+    +sm
+        width: 100%
+.footer__coryright
+    font-size: em(12)
+    color: $gray
+    vertical-align: top
+    display: inline-block
+    +sm
+        width: 100%
+        margin-bottom: 15px
+    a.underlined
+        color: $gray
+.footer__copyright_wide
+    width: calc(75%/2.3 - 20px + 15px)
+            

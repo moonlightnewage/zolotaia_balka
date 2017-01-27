@@ -1,26 +1,23 @@
-
 {% import "data/comments.html" as comments %}
-   <section class="comments">
-   <div class="comments__slider" id="comments-slider">
-        <div class="comments__content">
-           {% for comment in comments.comments_slider %}
-          <div class="comments__content-inner flick">
+<section class="comments">
+  <!--BEGIN - Comments slider-->
+   <div class="comments__slider">
+        {% for comment in comments.comments_slider %}
+        <!--BEGIN - Comments slide-->
+        <div class="comments__slide">
+           <div class="comments__slide_inner">
             <div class="comments__text">{{comment.text}}</div>
                 <div class="comments__meta">
                     <div class="comments__author">
-                        <div class="comments__author-name">{{comment.name}}</div>
-                        <div class="comments__author-position">{{comment.position}}</div>
+                        <div class="comments__name">{{comment.name}}</div>
+                        <div class="comments__position">{{comment.position}}</div>
                     </div>
-                <div class="signature comments__signature"></div>
+                    <div class="comments__signature"></div>
                 </div>
             </div>
-            {% endfor %}
         </div>
-        <div class="dots">
-            {% for comment in comments.comments_slider %}
-            <div class="dot" data-sign="{{comment.signature}}"></div>
-            {% endfor %}
-        </div>
-        
+        <!--END - Comments slide-->
+        {% endfor %}
     </div>
+    <!--END - Comments slider-->
 </section>

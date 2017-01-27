@@ -1,7 +1,7 @@
 export default function tabMenu(initialView, futherView) {
-    var tabMenu = $('#tab-menu'),
-        menuItems = $(tabMenu).find('.menu__tab'),
-        vines = $(tabMenu).find('.vine'),
+    var tabMenu = $('.products__view'),
+        menuItems = $(tabMenu).find('.products__tab'),
+        wines = $(tabMenu).find('.products__img'),
         images = [],
         sorts = [],
         firstStep = initialView,
@@ -15,15 +15,15 @@ export default function tabMenu(initialView, futherView) {
     
 //    BEGIN - showing sort function
     function showSort(sort) {
-        $(vines).parent().hide();
-        var sort = $('.vine').filter($('[data-sort = "'+ sort +'"]'));
+        $(wines).parent().hide();
+        var sort = $('.products__img').filter($('[data-sort = "'+ sort +'"]'));
         
         for (var i = 0; i < firstStep; i++) {
             $(sort[i]).parent().fadeIn(600);
         }
         
-        $('.products__show').click(function() {
-            $(vines).parent().hide();
+        $('.products__btn_show').click(function() {
+            $(wines).parent().hide();
         for (var i = 0; i < firstStep + secondStep; i++) {
             $(sort[i]).parent().show();
         }
@@ -58,7 +58,7 @@ export default function tabMenu(initialView, futherView) {
                 showSort('sparkling');
                 break;
             default:
-                $(vines).hide();
+                $(wines).hide();
         }
         //    END - selecting sort
     });
@@ -66,7 +66,7 @@ export default function tabMenu(initialView, futherView) {
     
     
 //    BEGIN - adding bg-images
-    $(vines).each(function() {
+    $(wines).each(function() {
         var self = $(this);
         var image = $(self).attr('data-img');
         $(self).css('background-image', 'url(img/' + image + ')');
@@ -83,16 +83,16 @@ export default function tabMenu(initialView, futherView) {
         
         $(product).on('mouseenter', function(e) {
             e.stopPropagation();
-            $(this).find('.pop-up').fadeIn(400);
-            $(this).find('.vine').animate({
+            $(this).find('.products__pop-up').fadeIn(400);
+            $(this).find('.products__img').animate({
                 opacity: '0.5',
                 zoom: '0.98'
             }, 100);
         });
         $(product).on('mouseleave', function(e) {
             e.stopPropagation();
-            $(this).find('.pop-up').hide();
-            $(this).find('.vine').animate({
+            $(this).find('.products__pop-up').hide();
+            $(this).find('.products__img').animate({
                 opacity: '1',
                 zoom: '1'
             }, 0);

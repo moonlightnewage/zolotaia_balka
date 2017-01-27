@@ -1,37 +1,31 @@
-{% import "data/header_slider.html" as slides %}
-<header id="header-slider" class="header">
+<header class="header">
+    <div class="frame-block">
+        <!--BEGIN - Logo-->
+        <div class="logo header__logo"></div>
+        <!--END - Logo-->
+        <!--BEGIN - Scroll block-->
+        <div class="header__scroll">
+            <div class="header__scroll_inner">
+                <div class="header__scroll_text">Прокрутите</div>
+                <div class="header__scroll_icon"> 
+                    <span class="icon__mouse"></span> 
+                </div>
+                <div class="header__scroll_text">скролл вниз!</div>
+            </div>
+        </div>
+        <!--END - Scroll block-->
+    </div>
     <!--BEGIN - HEADER Slider-->
     <div class="header__slider">
-            <!--BEGIN - Logo-->
-            <div class="header__logo"> 
-            <img src="img/logo.svg" alt="Золотая балка" class="header__logo-img"> 
-            </div>
-            <!--END - Logo-->
-            <!--BEGIN - Title-->
-            <div class="header__titles"> 
-                {% for slide in slides.header_slider %}
-                <h1 class="header__title flick">{{slide.title}}</h1> 
-                {% endfor %} 
-            </div>
-            <!--END - Title-->
-            <!--BEGIN - Slider navigation-->
-            <div class="dots">
-                {% for slide in slides.header_slider %}
-                <div class="dot" data-img="{{slide.image}}"></div> 
-                {% endfor %}
-            </div>
-            <!--END - Slider navigation-->
-            <!--BEGIN - Scroll block-->
-            <div class="header__scroll">
-               <div class="header__scroll-content">
-                    <div class="header__scroll-text">Прокрутите</div> 
-                    <div class="header__scroll-icon">
-                        <span class="icon__mouse"></span>
-                    </div>
-                    <div class="header__scroll-text">скролл вниз!</div>
-                </div> 
-            </div>
-            <!--END - Scroll block-->
+        <div class="header__slide">
+            <h1 class="header__title">Благородное происхождение</h1> 
+        </div>
+        <div class="header__slide">
+            <h1 class="header__title">Богатые традиции</h1> 
+        </div>
+        <div class="header__slide">
+            <h1 class="header__title">Изысканный букет</h1> 
+        </div>
     </div>
     <!--END - HEADER SLIDER-->
 </header>

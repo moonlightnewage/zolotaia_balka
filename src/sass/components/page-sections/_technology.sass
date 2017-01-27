@@ -1,0 +1,58 @@
+.tech
+    width: 100%
+    +clr
+.tech__container
+    width: 50%
+    min-height: 665px
+    float: left
+    position: relative
+    +sm
+        width: 100%
+.tech__container_inner
+    position: relative
+    min-height: 665px
+.tech__frame-block
+    width: 100%
+    +sm
+        border: none
+        margin: 0
+.tech__frame-block_left
+    border-right: none
+    margin-right: 0
+.tech__frame-block_right
+    border-left: none
+    margin-left: 0
+.tech__text
+    width: 100%
+    max-width: 517px
+    z-index: 10
+    +vcenter
+    h1
+        border-bottom: 2px solid $gold
+        padding: 25px 38px
+        font-family: $ptsans-narrow-bold, sans-serif
+        font-size: em(30)
+        text-transform: uppercase
+        display: inline-block
+        +xs
+            font-size: em(25)
+        &:after
+            content: ''
+            background-color: #fff
+            width: percentage(430/517)
+            height: 4px
+            display: block
+            position: relative
+            top: 28px
+            left: 100px
+        
+    p
+        padding: 25px 38px
+        font-family: $charter-regular, sans-serif
+        text-align: left
+        span
+            font-family: $charter-bold, sans-serif
+            color: $gold
+.tech__slide
+    height: 665px
+    +cover

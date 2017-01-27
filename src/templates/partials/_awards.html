@@ -1,28 +1,20 @@
 {% import "data/awards_slider.html" as slides %}
 <section class="awards">
-        <!--BEGIN - Awards carousel-->
-        <div class="awards__carousel" id="awards-carousel">
-         <!--BEGIN - Arrow left-->
-          <div class="awards__trigger awards__trigger-left">
-              <span class="icon__arrow_left"></span>
-          </div>
-          <!--END - Arrow left-->
-           <!--BEGIN - Awards carousel box-->
-            <div class="awards__carousel-box">
-                <ul class="awards__items"> 
-                   {% for slide in slides.awards_slider %}
-                    <li class="awards__item">
-                        <div class="awards__item-icon icon__leaves"></div><a href="#" class="awards__item-link">{{slide.text}}</a>
-                    </li> 
-                    {% endfor %} 
-                </ul>
-            </div>
-            <!--END - Awards carousel box-->
-        <!--BEGIN - Arrow right-->
-        <div class="awards__trigger awards__trigger-right">
-              <span class="icon__arrow_right"></span>
-          </div>
-        <!--END - Arrow right-->
-        </div>
-        <!--END - Awards carousel-->
+   <!--BEGIN - Awards slider-->
+    <div class="awards__slider"> 
+       {% for slide in slides.awards_slider %}
+       <!--BEGIN - Awards slide-->
+        <div class="awards__slide"> 
+            <a href="#" class="awards__text">{{slide.text}}</a> 
+        </div> 
+        <!--END - Awards slide-->
+        {% endfor %} 
+    </div>
+    <!--END - Awards slider-->
+    <!--BEGIN - Awards paginator-->
+    <div class="awards__paginator">
+        <div class="awards__prev"></div>
+        <div class="awards__next"></div>
+    </div>
+    <!--END - Awards paginator-->
 </section>

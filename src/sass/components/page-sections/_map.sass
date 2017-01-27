@@ -1,0 +1,104 @@
+/* MAP SECTION */
+
+.map
+    position: relative
+.map__canvas
+    width: 100%
+    height: 590px
+    position: relative
+    z-index: 1
+.map__controls
+    width: 100%
+    max-width: 1074px
+    height: 45px
+    position: absolute
+    top: 50px
+    left: 50%
+    right: 50%
+    transform: translate(-50%, -50%)
+    z-index: 999
+    background-color: transparent
+    +clr
+.map__elem 
+    width: 100%
+    height: 100%
+    background-color: $gold
+    font-family: $ptsans-narrow-bold, sans-serif
+    color: #fff
+    text-align: center
+    text-transform: uppercase
+    float: left
+.map__scale
+    max-width: 20px
+    margin-right: 8px
+    background-color: transparent
+.map__zoom
+    width: 20px
+    height: 20px
+    background-color: $gold
+    cursor: pointer
+.map__zoom-in
+    margin-bottom: 5px
+.map__on-map
+    max-width: 175px
+    +r(1075)
+        max-width: 125px
+    +r(930)
+        max-width: 100px
+    +r(777)
+        display: none
+.map__text_on-map
+    +vertical
+    font-size: 1em
+    overflow: hidden
+.map__icon_on-map
+    +vertical
+    font-size: 1.3em
+    .icon-marker
+        vertical-align: middle
+        fill: #fff
+.map__list
+    max-width: 530px
+    background-color: #fff
+    text-align: left
+    cursor: pointer
+    +r(1075)
+        max-width: 480px
+    +r(930)
+        max-width: 380px
+    +r(777)
+        display: none
+.map__dropdown
+    width: 100%
+    background-color: #fff
+    color: $gold
+    padding-left: 42px
+.map__dropdown-item
+    +vertical
+    text-align: left
+    font-size: 1em
+    height: 45px
+.map__text_list
+    +vertical
+    font-size: 1em
+    color: $gold
+.map__icon_list
+    +vertical
+    font-size: 1.3em
+    padding-left: 42px
+    .icon-list
+        vertical-align: middle
+        fill: $gold
+.map__region
+    max-width: 330px
+    display: table
+    +r(1075)
+        max-width: 280px
+    +r(930)
+        max-width: 250px
+    +r(301)
+        max-width: 220px
+.map__text_region
+    display: table-cell
+    vertical-align: middle
+    font-size: 1em

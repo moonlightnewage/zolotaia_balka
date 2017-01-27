@@ -1,66 +1,44 @@
 body
-  background: #FFF
-  font-family: 'CharterItalic'
+  background: #fff
+  font-family: $charter-italic, sans-serif
   font-size: 16px
   color: $brown
   line-height: 1.4
-    
-.dots
-    display: block
+
+.frame-block
     position: absolute
-    left: 50%
-    transform: translate(-50%)
-    bottom: get-vh(30px)
-    .dot__wrapper
-        display: inline-block
-        border: 1px solid transparent
-        border-radius: 50%
-        cursor: pointer
-        &:hover
-            transition: 0.4s
-            border-color: $gold
-        &.active
-            border-color: $gold
-        .dot
-            width: 15px
-            height: 15px
-            margin: 5px
-            border: none
-            border-radius: 50%
-            background-color: $gold
-            +md
-                width: 13px
-                height: 13px
-            +sm
-                width: 11px
-                height: 11px
-            +xs
-                width: 9px
-                height: 9px
-        
+    left: 18px
+    right: 18px
+    top: 18px
+    bottom: 18px
+    border: 1px solid $gold
+    z-index: 1
+  
+.logo
+    +image('logo.svg')
+    +cover
 .btn
     display: block
     background-color: transparent
     border: 1px solid $gold
     padding: 10px 20px
-    font-family: $ptsans-narrow-bold
+    font-family: $ptsans-narrow-bold, sans-serif
     color: $gold
     text-transform: uppercase
     &:hover
         transition: 0.4s
         background-color: $gold
         color: #fff
-
-.dropdown-list
-    width: 100%
-    background-color: #fff
-    color: $gold
-    padding-left: 42px
-    .dropdown-list__item
-        +vertical
-        text-align: left
-        font-size: 1em
-        height: 45px
+.underlined
+    border-bottom: 1px solid $gray
+    padding-bottom: 1px
+    text-decoration: none
+    display: inline-block
+    &:hover
+        transition: 0.4s
+        border-bottom-color: rgba(225,225,0,0)
+    +r(400)
+        border: none
 
 @each $png-icon in $png-icons
     .icon__#{$png-icon}

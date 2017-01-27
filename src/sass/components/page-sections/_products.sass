@@ -1,0 +1,100 @@
+/* PRODUCTS SECTION */
+
+.products
+    width: 100%
+    height: 100%
+.products__frame-block
+    position: static
+    margin: 18px
+.products__container
+    padding-top: get-vh(70px)
+    padding-bottom: get-vh(100px)
+.products__question
+    font-size: em(20)
+    font-weight: 600
+    text-align: center
+    padding: 0 10px get-vh(40px)
+.products__view
+    width: 100%
+    max-width: 1134px
+    margin: 0 auto
+.products__menu
+    text-align: center
+    +sm
+        display: inline-block
+.products__tab
+    font-family: $ptsans-narrow-bold, sans-serif
+    color: $gold
+    text-transform: uppercase
+    padding: 10px 40px
+    display: inline-block
+    cursor: pointer
+    +sm
+        display: block
+    &:hover
+        transition: 0.4s
+        background-color: $gold
+        color: #fff
+    &.active
+        background-color: $gold
+        color: #fff
+.products__block
+    margin: get-vh(80px) 0
+.products__item
+    width: 99/4 + %
+    position: relative
+    display: inline-block
+    +r(1176)
+        width: 99/3 + %
+    +r(803)
+        width: 99/2 + %
+    +r(432)
+        width: 99%
+.products__img
+    width: 140px
+    height: 545px
+    +cover
+    margin: 0 auto
+    cursor: pointer
+.products__pop-up
+    width: 100%
+    padding: 13px
+    background-color: #fff
+    +vcenter
+.products__pop-up_inner
+    border: 1px solid $gold
+.products__info_pop-up
+    text-align: center
+    padding: 15px 0
+.products__brand_pop-up
+    font-size: em(14)
+    font-weight: 600
+    color: $gold
+.products__heading_pop-up
+    padding: 15px 0
+    font-family: $ptsans-narrow-bold, sans-serif
+    font-size: em(18)
+    text-transform: uppercase
+.products__btn_pop-up
+    border: 2px solid #fff
+    margin: 0 auto
+    &:hover
+        transition: 0.4s
+        border-top: 2px solid $gold
+        background-color: transparent
+        color: $gold
+.products__btn_show
+    margin: 0 auto
+    &:before
+        content: "▼"
+        margin-right: em(8)
+.products__message
+    width: 100%
+    max-width: 645px
+    margin: 0 auto
+    margin-top: get-vh(105px)
+    font-family: $charter-regular, sans-serif
+    text-align: center
+.products__btn_shop
+    margin: get-vh(20px) auto
+        

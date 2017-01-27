@@ -1,28 +1,45 @@
-{% import "data/technology_slider.html" as slides %}
 <section class="tech">
-    <!--BEGIN - WRAPPER-->
-    <div class="tech__container tech__info">
-        <!--BEGIN - Technology info-->
-        <div class="tech__info-inner">
-            <div class="tech__content">
-                <div class="tech__title">
-                    <h1 class="tech__title-heading">Технологии производства</h1> 
-                    <span class="tech__title-line"></span> 
+   <!--BEGIN - Tech container-->
+    <div class="tech__container">
+        <!--BEGIN - Frame block-->
+        <div class="frame-block tech__frame-block tech__frame-block_left">
+          <!--BEGIN - Tech inner container-->
+           <div class="tech__container_inner">
+               <!--BEGIN - Tech text-->
+                <div class="tech__text">
+                    <h1>Технологии производства</h1> 
+                    <p>Вина нашей базовой коллекции собрали уже немало наград на международных конкурсах. В основе их производства лежит метод Шарма-Мартинотти. Он отличается от традиционного метода тем, что вторичная ферментация происходитне в бутылке, а в герметично закрытых чанах из нержавеющей стали - акротофорах. Принцип тот же: углекислый газ, который образуется во время брожения, «расворяется» в вине. Однако в отличие от метода Шарма не приедусматривает длительную выдержку вина на дрожжевом осадке, поэтому в нем практически отсутствуют дрожжевые ароматы, а фруктовые и цветочные, напротив, сохраняются в полной ясности и чистоте. Стиль <span>«Золотой Балки»</span> — минеральная свежесь. фруктовая округлость и чистота.</p>
                 </div>
-                <p class="tech__text">Вина нашей базовой коллекции собрали уже немало наград на международных конкурсах. В основе их производства лежит метод Шарма-Мартинотти. Он отличается от традиционного метода тем, что вторичная ферментация происходитне в бутылке, а в герметично закрытых чанах из нержавеющей стали - акротофорах. Принцип тот же: углекислый газ, который образуется во время брожения, «расворяется» в вине. Однако в отличие от метода Шарма не приедусматривает длительную выдержку вина на дрожжевом осадке, поэтому в нем практически отсутствуют дрожжевые ароматы, а фруктовые и цветочные, напротив, сохраняются в полной ясности и чистоте. Стиль <span class="gold">«Золотой Балки»</span> — минеральная свежесь. фруктовая округлость и чистота.</p>
+                <!--END - Tech text-->
+            </div>
+            <!--END - Tech inner container-->
+        </div>
+        <!--END - Frame block-->
+    </div>
+    <!--END - Tech container-->
+    
+    <!--BEGIN - Tech container-->
+    <div class="tech__container">
+       <!--BEGIN - Tech slider-->
+        <div class="tech__slider">
+            <div class="tech__slide">
+               <!--BEGIN - Frame block-->
+                <div class="frame-block tech__frame-block tech__frame-block_right"></div>
+                <!--END - Frame block-->
+            </div>
+            <div class="tech__slide">
+               <!--BEGIN - Frame block-->
+                <div class="frame-block tech__frame-block tech__frame-block_right"></div>
+                <!--END - Frame block-->
+            </div>
+            <div class="tech__slide">
+               <!--BEGIN - Frame block-->
+                <div class="frame-block tech__frame-block tech__frame-block_right"></div>
+                <!--END - Frame block-->
             </div>
         </div>
-        <!--END - Technology info-->
+        <!--END - Tech slider-->
     </div>
-    <!--END - WRAPPER-->
-    <!--BEGIN - WRAPPER-->
-    <div class="tech__container tech__slider" id="tech-slider">
-        <!--BEGIN - Slider navigation-->
-        <div class="tech__slider-inner">
-            <div class="dots"> {% for slide in slides.tech_slider %}
-                <div class="dot" data-img="{{slide.image}}"></div> {% endfor %} </div>
-        </div>
-        <!--END - Slider navigation-->
-    </div>
-    <!--END - WRAPPER-->
+    <!--END - Tech container-->
+
 </section>
