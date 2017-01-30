@@ -16,7 +16,7 @@ $(document).ready(function () {
     createMap();
     
     //    BEGIN - HEADER SLIDER
-    var headerSlider = $('.header__slider').slick({
+    var topSlider = $('.top-slider').slick({
         arrows: false,
         dots: true,
         fade: true,
@@ -26,11 +26,7 @@ $(document).ready(function () {
         autoplaySpeed: 3000
     });
     
-    var headerSliderBackground = ['slide_1.jpg', 'slide_2.jpg', 'slide_3.jpg'];
-    
-    setBackground('.header__slide', headerSliderBackground);
-    
-    $(headerSlider).find('.slick-dots').addClass('custom-slick-dots_header');
+    $(topSlider).find('.slick-dots').addClass('custom-slick-dots_top');
     //    END - HEADER SLIDER
     
     
@@ -65,10 +61,6 @@ $(document).ready(function () {
         autoplaySpeed: 3000
     });
     
-    var techSliderBackground = ['slide_1-tech.jpg', 'slide_1-tech.jpg', 'slide_1-tech.jpg'];
-    
-    setBackground('.tech__slide', techSliderBackground);
-    
     $(techSlider).find('.slick-dots').addClass('custom-slick-dots_tech');
     //    END - TECH SLIDER
     
@@ -83,10 +75,6 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 6000
     });
-    
-    var signatureBackground = ['signature_1.jpg', 'signature_1.jpg', 'signature_1.jpg'];
-    
-    setBackground('.comments__signature', signatureBackground);
     
     $(commentsSlider).find('.slick-dots').addClass('custom-slick-dots_comments');
     //    END - COMMENTS SLIDER

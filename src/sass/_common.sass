@@ -17,6 +17,32 @@ body
 .logo
     +image('logo.svg')
     +cover
+    
+.top-slider__slide
+    height: 100vh
+    text-align: center
+    +cover
+.top-slider__slide_first
+    +image('slide_1.jpg')
+.top-slider__slide_second
+    +image('slide_2.jpg')
+.top-slider__slide_third
+    +image('slide_3.jpg')
+    
+.top-slider__title
+    font-size: em(48)
+    color: #fff
+    position: absolute
+    bottom: get-vh(195px)
+    left: 50%
+    transform: translate(-50%)
+    +md
+        font-size: em(40)
+    +sm
+        font-size: em(32)
+    +xs
+        font-size: em(24)
+    
 .btn
     display: block
     background-color: transparent

@@ -402,6 +402,37 @@ body {
   background-position: 50% 50%;
 }
 
+.top-slider__slide {
+  height: 100vh;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top-slider__slide_first {
+  background-image: url("../img/slide_1.jpg");
+}
+
+.top-slider__slide_second {
+  background-image: url("../img/slide_2.jpg");
+}
+
+.top-slider__slide_third {
+  background-image: url("../img/slide_3.jpg");
+}
+
+.top-slider__title {
+  font-size: 3em;
+  color: #fff;
+  position: absolute;
+  bottom: 18.05556vh;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
 .btn {
   display: block;
   background-color: transparent;
@@ -489,7 +520,7 @@ body {
   background: #c1a247;
 }
 
-.custom-slick-dots_header {
+.custom-slick-dots_top {
   bottom: 13.42593vh;
 }
 
@@ -545,25 +576,6 @@ body {
 .header__scroll_icon {
   padding: 0 10px;
   display: inline-block;
-}
-
-.header__slide {
-  height: 100vh;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.header__title {
-  font-size: 3em;
-  color: #fff;
-  position: absolute;
-  bottom: 18.05556vh;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
 }
 
 /* NAVIGATION */
@@ -863,6 +875,18 @@ body {
   background-position: 50% 50%;
 }
 
+.tech__slide_first {
+  background-image: url("../img/slide_1-tech.jpg");
+}
+
+.tech__slide_second {
+  background-image: url("../img/slide_1-tech.jpg");
+}
+
+.tech__slide_third {
+  background-image: url("../img/slide_1-tech.jpg");
+}
+
 /* CENTURIES SECTION */
 .centuries {
   width: 100%;
@@ -1006,6 +1030,18 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   display: table-cell;
+}
+
+.comments__signature_first {
+  background-image: url("../img/signature_1.jpg");
+}
+
+.comments__signature_second {
+  background-image: url("../img/signature_1.jpg");
+}
+
+.comments__signature_third {
+  background-image: url("../img/signature_1.jpg");
 }
 
 /* PRODUCTS SECTION */
@@ -1470,6 +1506,9 @@ body {
 }
 
 @media only screen and (max-width: 1023px){
+  .top-slider__title{
+    font-size: 2.5em;
+  }
   .slick-dots li button:before{
     width: 13px;
     height: 13px;
@@ -1477,9 +1516,6 @@ body {
   .header__logo{
     width: 200px;
     height: 200px;
-  }
-  .header__title{
-    font-size: 2.5em;
   }
   .navigation__link{
     font-size: 0.875em;
@@ -1543,6 +1579,9 @@ body {
 }
 
 @media only screen and (max-width: 767px){
+  .top-slider__title{
+    font-size: 2em;
+  }
   .slick-dots li button:before{
     width: 11px;
     height: 11px;
@@ -1550,9 +1589,6 @@ body {
   .header__logo{
     width: 150px;
     height: 150px;
-  }
-  .header__title{
-    font-size: 2em;
   }
   .navigation{
     max-width: 300px;
@@ -1629,6 +1665,9 @@ body {
 }
 
 @media only screen and (max-width: 599px){
+  .top-slider__title{
+    font-size: 1.5em;
+  }
   .slick-dots li button:before{
     width: 9px;
     height: 9px;
@@ -1636,9 +1675,6 @@ body {
   .header__logo{
     width: 100px;
     height: 100px;
-  }
-  .header__title{
-    font-size: 1.5em;
   }
   .navigation__link{
     border: none;
