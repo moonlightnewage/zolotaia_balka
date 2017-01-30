@@ -410,18 +410,6 @@ body {
   background-position: 50% 50%;
 }
 
-.top-slider__slide_first {
-  background-image: url("../img/slide_1.jpg");
-}
-
-.top-slider__slide_second {
-  background-image: url("../img/slide_2.jpg");
-}
-
-.top-slider__slide_third {
-  background-image: url("../img/slide_3.jpg");
-}
-
 .top-slider__title {
   font-size: 3em;
   color: #fff;
@@ -875,18 +863,6 @@ body {
   background-position: 50% 50%;
 }
 
-.tech__slide_first {
-  background-image: url("../img/slide_1-tech.jpg");
-}
-
-.tech__slide_second {
-  background-image: url("../img/slide_1-tech.jpg");
-}
-
-.tech__slide_third {
-  background-image: url("../img/slide_1-tech.jpg");
-}
-
 /* CENTURIES SECTION */
 .centuries {
   width: 100%;
@@ -1030,18 +1006,6 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   display: table-cell;
-}
-
-.comments__signature_first {
-  background-image: url("../img/signature_1.jpg");
-}
-
-.comments__signature_second {
-  background-image: url("../img/signature_1.jpg");
-}
-
-.comments__signature_third {
-  background-image: url("../img/signature_1.jpg");
 }
 
 /* PRODUCTS SECTION */

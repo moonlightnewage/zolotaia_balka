@@ -4,7 +4,6 @@ window.$ = $;
 window.jQuery = jQuery;
 
 import sayHello from './lib/sayHello.js';
-import setBackground from './lib/slider.js';
 import tabMenu from './lib/tabMenu.js';
 import createMap from './lib/map.js';
 
