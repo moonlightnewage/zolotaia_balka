@@ -6,8 +6,10 @@
     background-color: $gold
     position: relative
 .awards__slider
-    width: 795px
+    width: 100%
+    max-width: 795px
     margin: 0 auto
+    overflow: hidden
     +vcenter
     z-index: 1
 .awards__slide
@@ -27,7 +29,8 @@
     z-index: 1
     +vcenter
 .awards__paginator
-    width: 920px
+    width: 100%
+    max-width: 920px
     +vcenter
 .awards__prev
     +s(arrow_left)

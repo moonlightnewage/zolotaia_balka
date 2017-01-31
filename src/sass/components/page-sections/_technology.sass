@@ -9,6 +9,7 @@
     +sm
         width: 100%
 .tech__container_inner
+    width: 100%
     position: relative
     min-height: 665px
 .tech__frame-block
@@ -16,6 +17,7 @@
     +sm
         border: none
         margin: 0
+        position: static
 .tech__frame-block_left
     border-right: none
     margin-right: 0
@@ -27,7 +29,7 @@
     max-width: 517px
     z-index: 10
     +vcenter
-    h1
+    h2
         border-bottom: 2px solid $gold
         padding: 25px 38px
         font-family: $ptsans-narrow-bold, sans-serif
@@ -36,6 +38,7 @@
         display: inline-block
         +xs
             font-size: em(25)
+            border: none
         &:after
             content: ''
             background-color: #fff
@@ -45,6 +48,8 @@
             position: relative
             top: 28px
             left: 100px
+            +xs
+                display: none
         
     p
         padding: 25px 38px
@@ -53,6 +58,8 @@
         span
             font-family: $charter-bold, sans-serif
             color: $gold
+.tech__slider
+    overflow: hidden
 .tech__slide
     height: 665px
     +cover

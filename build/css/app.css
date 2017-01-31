@@ -402,9 +402,14 @@ body {
   background-position: 50% 50%;
 }
 
+.top-slider {
+  overflow: hidden;
+}
+
 .top-slider__slide {
   height: 100vh;
   text-align: center;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -598,8 +603,8 @@ body {
   color: #3d322d;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   display: block;
-  position: relative;
 }
 
 .navigation__link:hover {
@@ -609,12 +614,7 @@ body {
 }
 
 .navigation__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  line-height: 63px;
 }
 
 /* HISTORY SECTION */
@@ -710,8 +710,10 @@ body {
 }
 
 .awards__slider {
-  width: 795px;
+  width: 100%;
+  max-width: 795px;
   margin: 0 auto;
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -749,7 +751,8 @@ body {
 }
 
 .awards__paginator {
-  width: 920px;
+  width: 100%;
+  max-width: 920px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -795,6 +798,7 @@ body {
 }
 
 .tech__container_inner {
+  width: 100%;
   position: relative;
   min-height: 665px;
 }
@@ -825,7 +829,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.tech__text h1 {
+.tech__text h2 {
   border-bottom: 2px solid #c1a247;
   padding: 25px 38px;
   font-family: "PTSansNarrowBold", sans-serif;
@@ -834,7 +838,7 @@ body {
   display: inline-block;
 }
 
-.tech__text h1:after {
+.tech__text h2:after {
   content: '';
   background-color: #fff;
   width: 83.17215%;
@@ -854,6 +858,10 @@ body {
 .tech__text p span {
   font-family: "CharterBold", sans-serif;
   color: #c1a247;
+}
+
+.tech__slider {
+  overflow: hidden;
 }
 
 .tech__slide {
@@ -960,6 +968,7 @@ body {
   max-width: 815px;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .comments__slide {
@@ -1022,6 +1031,7 @@ body {
 .products__container {
   padding-top: 6.48148vh;
   padding-bottom: 9.25926vh;
+  overflow: hidden;
 }
 
 .products__question {
@@ -1578,6 +1588,7 @@ body {
   .tech__frame-block{
     border: none;
     margin: 0;
+    position: static;
   }
   .centuries{
     height: 280px;
@@ -1647,8 +1658,12 @@ body {
   .history__figure{
     font-size: 6.625em;
   }
-  .tech__text h1{
+  .tech__text h2{
     font-size: 1.5625em;
+    border: none;
+  }
+  .tech__text h2:after{
+    display: none;
   }
   .centuries{
     height: 230px;
